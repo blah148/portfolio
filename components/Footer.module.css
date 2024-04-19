@@ -1,0 +1,59 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: gray;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topLevel {
+	display: flex;
+	flex-direction: column;
+	
+}
+.topLevel a {
+	margin: auto;
+}
+.footer img {
+  border-radius: 5px;
+  margin: auto;
+  transition: transform 0.1s ease; /* Added transition property */
+}
+
+.footer img:hover {
+  transform: scale(1.05); /* Scale the image by 1.05 when hovered */
+	opacity: 0.85;
+}
+
+.blurb {
+	text-align: center;
+	margin: 22px auto 22px auto;
+	font-size: 18px;
+	
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.socialIcon {
+  margin: auto;
+	padding: 8px;
+	transition: transform 0.1s ease;
+}
+
+.footer svg {
+  width: 30px;
+}
+
+.socialIcon:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* Scale the image by 1.05 when hovered */
+}
+
+.footer svg path {
+  fill: #fff;
+}
+

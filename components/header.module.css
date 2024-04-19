@@ -1,0 +1,61 @@
+/* header.module.css */
+
+.logo {
+  text-align: center;
+  margin: 0 auto 0 0;
+}
+
+.logo a {
+  display: inline-block;
+  border-radius: 8px;
+  transition: transform 0.1s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.05);
+	opacity: 0.85;
+}
+
+.logo img {
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 62px;
+  background-color: #fff;
+}
+
+.navLinks {
+	display: flex;
+	align-content: center;
+}
+.navLinks a {
+	font-size: 22px;
+	margin: auto 16px;
+	text-decoration: none;
+}
+.normalLink:hover {
+	opacity: 0.6;
+}
+.navLinks .button {
+	background: linear-gradient(165deg,#26d6c4,#10b1d3);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 15px #1cc5cb80;
+  color: #fff;
+  cursor: pointer;
+  margin: 12px 0 0 0;
+  text-align: center;
+	margin: auto 0 auto 8px;
+}
+.button:hover {
+	filter: saturate(1.4);
+
+}
+
+.button a {
+	color: white;
+}

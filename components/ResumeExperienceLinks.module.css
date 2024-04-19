@@ -1,0 +1,47 @@
+.iconRow {
+  display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.iconRow svg {
+	width: 20px;
+}
+.iconContainer {
+  position: relative;
+}
+a:hover .icon.nonproject {
+	opacity: 0.5;
+}
+.iconContainer:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.transparentRect {
+  fill: none;
+}
+.icon {
+	padding: 1px 8px;
+}
+.project.icon {
+	padding: 1px 8px;
+	background-color: #20ccc8;
+  border-radius: 20px;
+}
+.project.icon path,
+.project.icon rect {
+	fill: white;
+}
+a:hover .project.icon {
+	filter: saturate(1.5);
+}

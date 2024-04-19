@@ -1,0 +1,123 @@
+.mainContent {
+	padding: 34px 62px;
+	max-width: 1200px;
+	background-color: white;
+	margin: 94px auto;
+	box-shadow: 0 2px 15px #bebebe80;
+	border-radius: 8px;
+}
+.mainContent h1 {
+	margin: 8px 0 0 0;
+	font-size: 42px;
+}
+.mainContent h2 {
+	font-weight: 800;
+	font-size: 42px;
+	line-height: 45px;
+	margin: 0 0 32px 0;
+}
+.podOne {
+	display: grid;
+	grid-template-columns: 1fr 2.8fr;
+}
+.podOne p {
+	font-size: 18px;
+}
+.podOneColumnTwo {
+	margin: 0 0 0 22px;
+}
+.podOneColumnTwoContactRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.contactInfoRow {
+	display: flex;
+}
+.contactInfoRow label {
+	margin: auto 0;
+}
+.contactInfoRow {
+  margin: 8px 8px;
+  padding: 4px 8px;
+  display: flex;
+  max-height: 34px;
+  align-items: center;
+	justify-content: center;
+  border-radius: 30px;
+	cursor: pointer;
+  text-decoration: none;
+}
+.contactInfoRow:hover {
+  color: #fafafa;
+  background-color: #1CC5CB;
+}
+
+.contactInfoRow svg {
+  height: 20px;
+	margin: 0 0 0 auto;
+  width: 20px;
+}
+.contactInfoRow {
+  font-size: 13px;
+  font-weight: 400;
+  color: #284646;
+	background-color: white;
+  border: 1px solid #d9d9d9;
+  box-shadow: 1px -2px 8px rgba(0, 0, 0, 0.34) inset;
+}
+.contactInfoRow:hover path,
+.contactInfoRow:hover #icon polygon,
+.contactInfoRow:hover .menuLabel,
+.contactInfoRow:hover rect {
+  fill: #fafafa !important;
+  color: #fafafa;
+}
+.contactInfoRow label {
+  cursor: pointer;
+	margin: auto auto auto 12px;
+	font-size: 15px;
+}
+
+
+
+
+.podTwo {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin: 48px 0 0 0;
+  column-gap: 72px;
+}
+.podTwoColumnOne ul {
+	margin: 0 0 42px 0;
+	padding-left: 18px;
+}
+.podTwoColumnOne li {
+	font-size: 18px;
+}
+.podTwoColumnTwo {
+	margin: 0px 0 22px 0;
+}
+.podTwoColumnTwoExperienceRow {
+	display: grid;
+}
+.experiencePod {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 24px 0;
+}
+.experienceInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 4px 32px 4px 0;
+}
+.title {
+	font-size: 20px;
+}
+.organization {
+	font-size: 20px;
+	font-weight: 700;
+}
+.timespan {
+	font-size: 20px;
+}

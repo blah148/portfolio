@@ -36,13 +36,17 @@ export default function Home() {
 					<div className="gridObject">
 						<div className="textInfo">
 							<div className="gridTitle">Ploddings</div>
-							<div className="gridDescription">I built a blues guitar learning platform that fundraises via membership revenue for the Mt. Zion Memorial Fund, with a user-base more than 250 active members.</div>
+							<div className="gridDescription">I built a blues guitar learning platform that fundraises via membership revenue for the Mt. Zion Memorial Fund, with a user-base of more than 250 active members.</div>
 							<div className="button"><Link href="/projects/ploddings">View Project</Link></div>
 						</div>
 						<div className="imagePreview">
-							<Link href="/">
-								<Image>
-								</Image>
+							<Link href="/projects/ploddings">
+								<Image
+									src="https://f005.backblazeb2.com/file/unique-files/portfolio-ploddings-featured-img.png"
+									alt="ploddings - featured image"
+									width={638}
+									height={384}
+								/>
 							</Link>
 						</div>
 					</div>
@@ -50,12 +54,16 @@ export default function Home() {
 						<div className="textInfo">
 							<div className="gridTitle">Spot Dog Walkers</div>
 							<div className="gridDescription">From 100s to over 10,000 hits-per-month, I undertook a new blog strategy & built an automated email flow for organic leads.</div>
-							<div className="button"><Link href="/projects/ploddings">View Project</Link></div>
+							<div className="button"><Link href="/projects/spotdogwalkers">View Project</Link></div>
 						</div>
 						<div className="imagePreview">
-							<Link href="/">
-								<Image>
-								</Image>
+							<Link href="/projects/spotdogwalkers">
+            <Image
+              src="https://f005.backblazeb2.com/file/unique-files/portfolio-spot-featured-img.png"
+              alt="spot dog walkers - featured image"
+              width={638}
+              height={384}
+            />
 							</Link>
 						</div>
 					</div>
@@ -63,12 +71,16 @@ export default function Home() {
 						<div className="textInfo">
 							<div className="gridTitle">AlgaeCal</div>
 							<div className="gridDescription">We were spending between $12,000 to $18,000 per day on Meta Ads, and I worked as the primary Meta Ads Specialist.</div>
-							<div className="button"><Link href="/projects/ploddings">View Project</Link></div>
+							<div className="button"><Link href="/projects/algaecal">View Project</Link></div>
 						</div>
 						<div className="imagePreview">
-							<Link href="/">
-								<Image>
-								</Image>
+							<Link href="/projects/algaecal">
+								<Image
+									src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-featured-img.png"
+									alt="algaecal - featured image"
+									width={638}
+									height={384}
+								/>
 							</Link>
 						</div>
 					</div>

@@ -25,16 +25,47 @@ body {
 }
 .imageRow {
 	display: flex;
+	overflow: hidden;
 }
 .projectsRow {
 	padding: 54px 62px;
+	max-width: 1500px;
+	margin: auto;
 }
 .specialTitle {
 	font-size: 36px;
 	font-weight: 700;
 }
 .gridObject {
-	margin: 54px 0;
+	margin: 54px 0 94px 0;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	column-gap: 32px;
+}
+.gridObject img {
+  max-width: 500px; /* New maximum width */
+	max-height: 310px;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+}
+.imagePreview {
+	display: flex;
+	justify-content: center;
+}
+.imagePreview a {
+	overflow: hidden;
+	border-radius: 10px;
+	max-height: 310px;
+}
+.imagePreview a:hover img {
+	box-shadow: 0 2px 15px #1cc5cb80;
+	opacity: 0.9;
+	transform: scale(1.05);
+}
+.imagePreview a:hover {
+	box-shadow: 0 2px 15px #1cc5cb80;
+	opacity: 0.9;
+	
 }
 .gridTitle {
 	text-transform: uppercase;

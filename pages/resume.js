@@ -83,7 +83,7 @@ export default function Resume() {
                   <div className={styles.organization}>Facebook Blueprint 321-101</div>
                   <div className={styles.timespan}>Aug 2019</div>
                 </div>
-                <ResumeExperienceLinks externalLinkText="View certification" companyWebsite="https://www.youracclaim.com/badges/ba836887-0ea9-4ae7-8252-80c57f82caa6/linked_in_profile" />
+                <ResumeExperienceLinks column={true} externalLinkText="View certification" companyWebsite="https://www.youracclaim.com/badges/ba836887-0ea9-4ae7-8252-80c57f82caa6/linked_in_profile" />
               </div>
               <div className="separator"></div>
               <div className={styles.experiencePod}>
@@ -92,7 +92,7 @@ export default function Resume() {
                   <div className={styles.organization}>Facebook Blueprint 310-101</div>
                   <div className={styles.timespan}>Jul 2019</div>
                 </div>
-                <ResumeExperienceLinks externalLinkText="View certification" companyWebsite="https://www.youracclaim.com/badges/ba836887-0ea9-4ae7-8252-80c57f82caa6/linked_in_profile" />
+                <ResumeExperienceLinks column={true} externalLinkText="View certification" companyWebsite="https://www.youracclaim.com/badges/ba836887-0ea9-4ae7-8252-80c57f82caa6/linked_in_profile" />
               </div>
               <div className="separator"></div>
               <div className={styles.experiencePod}>
@@ -101,7 +101,7 @@ export default function Resume() {
                   <div className={styles.organization}>University of Calgary</div>
                   <div className={styles.timespan}>Apr 2017</div>
                 </div>
-                <ResumeExperienceLinks externalLinkText="View certification" companyWebsite="https://f005.backblazeb2.com/file/unique-files/mitchell-park_transcript.pdf" />
+                <ResumeExperienceLinks column={true} externalLinkText="View certification" companyWebsite="https://f005.backblazeb2.com/file/unique-files/mitchell-park_transcript.pdf" />
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function Resume() {
                     <div className={styles.organization}>Ploddings</div>
                     <div className={styles.timespan}>Dec 2018 - present</div>
                   </div>
-                  <ResumeExperienceLinks companyWebsite="https://ploddings.com" referenceName="T. DeWayne Moore" referencePosition="Assistant Professor of History, Texas A&M University" referencePhone="1-615-663-7858" projectSummary="/projects/ploddings" />
+                  <ResumeExperienceLinks column={true} companyWebsite="https://ploddings.com" referenceName="T. DeWayne Moore" referencePosition="Assistant Professor of History, Texas A&M University" referencePhone="1-615-663-7858" projectSummary="/projects/ploddings" />
                 </div>
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>
@@ -124,7 +124,7 @@ export default function Resume() {
                     <div className={styles.organization}>Spot Dog Walkers</div>
                     <div className={styles.timespan}>Sep 2021 - Oct 2022</div>
                   </div>
-                  <ResumeExperienceLinks companyWebsite="https://www.spotdogwalkers.com/" referenceName="John Minchin" referencePosition="Co-Founder, Owner" referencePhone="1-403-889-5139" projectSummary="/projects/spotdogwalkers" />
+                  <ResumeExperienceLinks column={true} companyWebsite="https://www.spotdogwalkers.com/" referenceName="John Minchin" referencePosition="Co-Founder, Owner" referencePhone="1-403-889-5139" projectSummary="/projects/spotdogwalkers" />
                 </div>
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>
@@ -133,7 +133,7 @@ export default function Resume() {
                     <div className={styles.organization}>Linx Digital Agency</div>
                     <div className={styles.timespan}>Jul 2020 - Apr 2021</div>
                   </div>
-                  <ResumeExperienceLinks companyWebsite="https://linxdigital.com/" referenceName="Alex Tretjakov" referencePosition="Co-Owner" referencePhone="1-403-710-1649" />
+                  <ResumeExperienceLinks column={true} companyWebsite="https://linxdigital.com/" referenceName="Alex Tretjakov" referencePosition="Co-Owner" referencePhone="1-403-710-1649" />
                 </div>
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>
@@ -142,7 +142,7 @@ export default function Resume() {
                     <div className={styles.organization}>Jetfuel Agency</div>
                     <div className={styles.timespan}>Oct 2019 to Jan 2020</div>
                   </div>
-                  <ResumeExperienceLinks companyWebsite="https://jetfuel.agency/" referenceName="Edwin Choi" referencePosition="Owner" referencePhone="1-714-278-1930" />
+                  <ResumeExperienceLinks column={true} companyWebsite="https://jetfuel.agency/" referenceName="Edwin Choi" referencePosition="Owner" referencePhone="1-714-278-1930" />
                 </div>
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>
@@ -151,7 +151,7 @@ export default function Resume() {
                     <div className={styles.organization}>AlgaeCal</div>
                     <div className={styles.timespan}>Oct 2018 - Sep 2019</div>
                   </div>
-                  <ResumeExperienceLinks companyWebsite="https://www.algaecal.com/" referenceName="Philip Jordan Wong" referencePosition="Director of Acquisition" referencePhone="1-403-819-3912" projectSummary="/projects/algaecal" />
+                  <ResumeExperienceLinks column={true} companyWebsite="https://www.algaecal.com/" referenceName="Philip Jordan Wong" referencePosition="Director of Acquisition" referencePhone="1-403-819-3912" projectSummary="/projects/algaecal" />
                 </div>
               </div>
             </div>

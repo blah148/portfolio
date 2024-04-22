@@ -1,10 +1,18 @@
-.iconRow {
+.iconColumn {
   display: flex;
 	flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.iconRow svg {
+.iconRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	width: 100px;
+}
+
+.iconRow svg,
+.iconColumn svg {
 	width: 20px;
 }
 .iconContainer {

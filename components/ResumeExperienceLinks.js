@@ -7,10 +7,11 @@ const ResumeExperienceLinks = ({
   referencePosition,
   referencePhone,
   projectSummary,
-  externalLinkText // New prop for external link tooltip text
+  externalLinkText,
+	column
 }) => {
   return (
-    <div className={styles.iconRow}>
+    <div className={column ? styles.iconColumn : styles.iconRow}>
       {companyWebsite && (
         <a
           href={companyWebsite}

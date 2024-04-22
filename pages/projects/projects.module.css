@@ -1,0 +1,52 @@
+/* projects css */
+
+.mainContent {
+	max-width: 1080px;
+	margin: 48px auto 72px auto;
+}
+
+.infoBox {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	column-gap: 64px;
+	margin: 0 0 54px 0;
+}
+.infoBox h2,
+.infoBox h3 {
+	text-transform: uppercase;
+}
+.infoBox h2 {
+	font-size: 32px;
+	margin-top: 0;
+}
+.infoBox h3 {
+	font-size: 24px;
+	margin: 0 0 12px 0;
+}
+.infoBoxColumnOneSection div {
+	margin: 0 0 42px 0;
+	font-size: 19px;
+	font-weight: 300;
+}
+.infoBoxColumnTwoHeader {
+	display: flex;
+	justify-content: space-between;
+}
+.infoBoxColumnTwo h2 {
+	margin: 0 0 0 0 ;
+}
+.infoBoxColumnTwo p {
+	font-size: 19px;
+}
+.infoBoxColumnThree svg {
+	width: 26px;
+}
+.infoBoxColumnThree a {
+	margin: 0 0 28px 0;
+}
+
+.contentBody {
+	font-size: 20px;
+	margin: auto auto 100px auto;
+	max-width: 864px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './ResumeExperienceLinks.module.css'; // Import CSS module
 
 const ResumeExperienceLinks = ({
@@ -53,7 +54,7 @@ const ResumeExperienceLinks = ({
       )}
 
       {projectSummary && (
-        <a
+        <Link
           href={projectSummary}
           className={styles.iconContainer}
           data-tooltip="Read more: project summary"
@@ -70,7 +71,7 @@ const ResumeExperienceLinks = ({
             <rect x="14" y="15" width="8" height="2"/>
             <rect x="14" y="22" width="8" height="2"/>
           </svg>
-        </a>
+        </Link>
       )}
     </div>
   );

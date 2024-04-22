@@ -9,9 +9,15 @@ body {
 .loaderComponent {
 	width: 100px;
 }
-
-.titleRow {
-	padding: 86px 62px 54px 62px;
+@media (min-width: 880px) {
+	.titleRow {
+		padding: 86px 62px 54px 62px;
+	}
+}
+@media (max-width: 879px) {
+	.titleRow {
+		padding: 44px 28px;
+	}
 }
 .titleMain {
 	font-size: 54px;
@@ -27,30 +33,58 @@ body {
 	display: flex;
 	overflow: hidden;
 }
-.projectsRow {
-	padding: 54px 62px;
-	max-width: 1500px;
-	margin: auto;
-}
 .specialTitle {
 	font-size: 36px;
 	font-weight: 700;
 }
 .gridObject {
 	margin: 54px 0 94px 0;
-	display: grid;
-	grid-template-columns: 1fr 1.5fr;
-	column-gap: 32px;
+}
+.imagePreview {
+	display: flex;
+}
+
+@media (min-width: 1080px) {
+	.gridObject {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		column-gap: 32px;
+  	margin: 54px 0 94px 0;
+	}
+	.imagePreview {
+		justify-content: center;
+	}
+	
+}
+@media (max-width: 1079px) {
+	.gridObject {
+		display: flex;
+		flex-direction: column;
+		margin: 44px 0 64px 0;
+	}
+	.imagePreview {
+		margin: 30px 0 0 0;
+		justify-content: flex-start;
+	}
+
+}
+@media (min-width: 768px) {
+	.projectsRow {
+		padding: 54px 62px;
+		max-width: 1500px;
+		margin: auto;
+	}
+}
+@media (max-width: 767px) {
+	.projectsRow {
+		padding: 48px 32px;
+	}
 }
 .gridObject img {
   max-width: 500px; /* New maximum width */
 	max-height: 310px;
 	border-radius: 10px;
 	transition: transform 0.3s ease;
-}
-.imagePreview {
-	display: flex;
-	justify-content: center;
 }
 .imagePreview a {
 	overflow: hidden;
@@ -175,7 +209,7 @@ svg.menuIcon:hover path, svg.notIcon:hover path {
 }
 .menuLabel {
   margin-left: 11px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: #284646;
 }

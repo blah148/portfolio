@@ -20,11 +20,21 @@
   border-radius: 5px;
 }
 
+@media (min-width: 1366px) {
+	.header {
+	  padding: 1rem 62px;
+	}
+}
+@media (max-width: 1365px) {
+	.header {
+		padding: 1rem 14px;
+	}
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 62px;
   background-color: #fff;
 }
 

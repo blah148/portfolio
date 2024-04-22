@@ -5,11 +5,32 @@
 	margin: 48px auto 72px auto;
 }
 
-.infoBox {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-	column-gap: 64px;
-	margin: 0 0 54px 0;
+@media (min-width: 1366px) {
+	.infoBox {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		column-gap: 64px;
+		margin: 0 0 54px 0;
+	}
+}
+@media (max-width: 1365px) {
+	.infoBox {
+		display: flex;
+		flex-direction: column;
+		padding: 0 16px;
+	}
+	.infoBoxColumnOne {
+		order: 1;
+		display: grid;
+		grid-template-columns: 5fr 1fr 1fr;
+		column-gap: 36px;
+	}
+	.infoBoxColumnTwo {
+		order: 0;
+	}
+	.contentBody {
+		padding: 0 16px;
+	}
 }
 .infoBox h2,
 .infoBox h3 {

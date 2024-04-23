@@ -168,14 +168,6 @@ return (
 							</svg>
 							<label>Calgary, Alberta, Canada</label>
 						</a>
-						<a className={styles.imageLink} href="https://www.google.com/maps?q=Calgary,Alberta,Canada" target="_blank">
-							<Image
-								src="https://f005.backblazeb2.com/file/unique-files/centre-street-bridge(1).jpg"
-								width={280}
-								height={280}
-								alt="centre street bridge calgary after 1916"
-							/>
-						</a>
 					</div>
         </div>
       </div>

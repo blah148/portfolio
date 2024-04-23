@@ -18,7 +18,7 @@
 .contactContent {
 	margin: 28px 0 0 0;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 3fr 1.2fr;
 }
 @media (min-width: 1366px) {
 	.contact-form {
@@ -118,13 +118,16 @@
 }
 @media screen and (min-width: 768px) {
 	.contactInfo {
-		padding: 22px;
+		max-height: 240px;
+		justify-content: center;
+		padding: 22px 18px;
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
 		align-content: center;
 		margin-left: 18px;
 		background-color: #f1f1f1;
+		box-shadow: 1px 8px 15px #2626262e;
 	}
 }
 .contactInfoRow {

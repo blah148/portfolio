@@ -2,22 +2,51 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from "next/image";
 import styles from './about.module.css';
+import Loader from '../components/Loader';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function About() {
+
+  const totalImages = 2;
+  const imagesLoadedRef = useRef(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Handler for when an image finishes loading
+  const handleImageLoaded = () => {
+    imagesLoadedRef.current += 1;
+    if (imagesLoadedRef.current === totalImages) {
+      setIsLoading(false);
+    }
+  };
+
+  // Error handler for image loading errors
+  const handleImageError = (error) => {
+    console.error('Image failed to load', error);
+  };
+
+
   return (
     <div>
       <Header />
+			<Loader isLoading={isLoading} />
       <div className="titleRow">
         <div className="titleMain">Stuck figuring things out by ear?</div>
         <div className="titleSecondary">Hit all the right notes by starting with the big stuff, then zooming into the small stuff.</div>
       </div>
       <div className="imageRow">
-        <Image src="https://media.licdn.com/dms/image/D5603AQHJAatJxfi9vg/profile-displayphoto-shrink_800_800/0/1713058885794?e=1718841600&v=beta&t=y50f1jaxZbnybIuJXDGMMKCyvigAkoHkeptZNhKT65M" alt="Profile Image" width={500} height={500} />
+        <Image 
+					src="https://media.licdn.com/dms/image/D5603AQHJAatJxfi9vg/profile-displayphoto-shrink_800_800/0/1713058885794?e=1718841600&v=beta&t=y50f1jaxZbnybIuJXDGMMKCyvigAkoHkeptZNhKT65M" 
+					alt="Profile Image" 
+					width={500} 
+					height={500} 
+					onLoadingComplete={handleImageLoaded}
+				/>
         <Image
           src="https://f005.backblazeb2.com/file/unique-files/background+(2052+x+500+px)(1).jpg"
           alt="Background Image"
           width={2052} // Set the width of the image
           height={500} // Set the height of the image
+					onLoadingComplete={handleImageLoaded}
         />  
       </div>
       <div className={styles.textBody}>

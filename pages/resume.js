@@ -3,8 +3,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './resume.module.css';
 import ResumeExperienceLinks from '../components/ResumeExperienceLinks';
+import Loader from '../components/Loader';
 
 export default function Resume() {
+
   return (
     <>
       <Header />

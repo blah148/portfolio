@@ -1,13 +1,31 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Loader from '../components/Loader';
-import { useLoading } from '../context/LoadingContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Home() {
+
+  const totalImages = 5;
+  const imagesLoadedRef = useRef(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Handler for when an image finishes loading
+  const handleImageLoaded = () => {
+    imagesLoadedRef.current += 1;
+    if (imagesLoadedRef.current === totalImages) {
+      setIsLoading(false);
+    }
+  };
+
+  // Error handler for image loading errors
+  const handleImageError = (error) => {
+    console.error('Image failed to load', error);
+  };
+
+
   return (
     <>
       <Head>
@@ -18,17 +36,23 @@ export default function Home() {
       </Head>
 			<Header />
       <main >
+				<Loader isLoading={isLoading} />
 				<div className="titleRow">
 					<div className="titleMain">I make online experiences better with custom-built tools.</div>
 					<div className="titleSecondary">From modern JavaScript websites, to zero-cookie tracking systems, to automated email flows.</div>
 				</div>
 				<div className="imageRow">
-					<Image src="https://media.licdn.com/dms/image/D5603AQHJAatJxfi9vg/profile-displayphoto-shrink_800_800/0/1713058885794?e=1718841600&v=beta&t=y50f1jaxZbnybIuJXDGMMKCyvigAkoHkeptZNhKT65M" alt="Profile Image" width={500} height={500} />
+					<Image 
+						src="https://media.licdn.com/dms/image/D5603AQHJAatJxfi9vg/profile-displayphoto-shrink_800_800/0/1713058885794?e=1718841600&v=beta&t=y50f1jaxZbnybIuJXDGMMKCyvigAkoHkeptZNhKT65M" alt="Profile Image" 
+						width={500} 
+						height={500} 
+						onLoadingComplete={handleImageLoaded} />
 			    <Image
             src="https://f005.backblazeb2.com/file/unique-files/background+(2052+x+500+px)(1).jpg"
             alt="Background Image"
-            width={2052} // Set the width of the image
-            height={500} // Set the height of the image
+            width={2052}
+            height={500}
+						onLoadingComplete={handleImageLoaded} 
           />	
 				</div>
 				<div className="projectsRow">
@@ -46,6 +70,7 @@ export default function Home() {
 									alt="ploddings - featured image"
 									width={638}
 									height={384}
+									onLoadingComplete={handleImageLoaded} 
 								/>
 							</Link>
 						</div>
@@ -58,12 +83,13 @@ export default function Home() {
 						</div>
 						<div className="imagePreview">
 							<Link href="/projects/spotdogwalkers">
-            <Image
-              src="https://f005.backblazeb2.com/file/unique-files/portfolio-spot-featured-img.png"
-              alt="spot dog walkers - featured image"
-              width={638}
-              height={384}
-            />
+							<Image
+								src="https://f005.backblazeb2.com/file/unique-files/portfolio-spot-featured-img.png"
+								alt="spot dog walkers - featured image"
+								width={638}
+								height={384}
+								onLoadingComplete={handleImageLoaded} 
+							/>
 							</Link>
 						</div>
 					</div>
@@ -80,6 +106,7 @@ export default function Home() {
 									alt="algaecal - featured image"
 									width={638}
 									height={384}
+									onLoadingComplete={handleImageLoaded} 
 								/>
 							</Link>
 						</div>

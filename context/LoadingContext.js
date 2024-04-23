@@ -8,11 +8,17 @@ export const LoadingProvider = ({ children }) => {
   const [loadingCount, setLoadingCount] = useState(0);
 
   const startLoading = useCallback(() => {
-    setLoadingCount((prevCount) => prevCount + 1);
+    setLoadingCount((prevCount) => {
+      console.log(`startLoading: current count is ${prevCount}, will increment to ${prevCount + 1}`);
+      return prevCount + 1;
+    });
   }, []);
 
   const stopLoading = useCallback(() => {
-    setLoadingCount((prevCount) => Math.max(0, prevCount - 1));
+    setLoadingCount((prevCount) => {
+      console.log(`stopLoading: current count is ${prevCount}, will decrement to ${Math.max(0, prevCount - 1)}`);
+      return Math.max(0, prevCount - 1);
+    });
   }, []);
 
   const isLoading = loadingCount > 0;
@@ -23,5 +29,4 @@ export const LoadingProvider = ({ children }) => {
     </LoadingContext.Provider>
   );
 };
-
 

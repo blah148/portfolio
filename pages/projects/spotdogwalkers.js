@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Loader from '../../components/Loader';
 import { useLoading } from '../../context/LoadingContext';
 import Header from '../../components/Header';
@@ -9,20 +9,46 @@ import styles from './projects.module.css';
 import ResumeExperienceLinks from '../../components/ResumeExperienceLinks';
 
 export default function Ploddings() {
+
+  const totalImages = 2;
+  const imagesLoadedRef = useRef(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Handler for when an image finishes loading
+  const handleImageLoaded = () => {
+    imagesLoadedRef.current += 1;
+    if (imagesLoadedRef.current === totalImages) {
+      setIsLoading(false);
+    }
+  };
+
+  // Error handler for image loading errors
+  const handleImageError = (error) => {
+    console.error('Image failed to load', error);
+  };
+
   return (
     <>
       <Header />
+			<Loader isLoading={isLoading} />
 			<div className="titleRow">
 				<div className="titleMain">Local dog walking app</div>
 				<div className="titleSecondary">I revamped their SEO, deployed a new email automation flow, and operated their paid advertising.</div>
 			</div>
 			<div className="imageRow">
-				<Image src="https://f005.backblazeb2.com/file/unique-files/portfolio-spotdogwalkers-featured-img-500h.png" alt="Profile Image" width={995} height={500} />
+				<Image 
+					src="https://f005.backblazeb2.com/file/unique-files/portfolio-spotdogwalkers-featured-img-500h.png" 
+					alt="Profile Image" 
+					width={995} 
+					height={500} 
+					onLoadingComplete={handleImageLoaded}
+				/>
 				<Image
 					src="https://f005.backblazeb2.com/file/unique-files/portfolio-spotdogwalkers-tile-background.png"
 					alt="Background Image"
 					width={2052} // Set the width of the image
 					height={500} // Set the height of the image
+					onLoadingComplete={handleImageLoaded}
 				/>	
 			</div>
 			<div className={styles.mainContent}>

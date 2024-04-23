@@ -27,7 +27,7 @@ export default function Home() {
 			    <Image
             src="https://f005.backblazeb2.com/file/unique-files/background+(2052+x+500+px)(1).jpg"
             alt="Background Image"
-            width={1800} // Set the width of the image
+            width={2052} // Set the width of the image
             height={500} // Set the height of the image
           />	
 				</div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState, useRef } from 'react';
 import Loader from '../../components/Loader';
@@ -29,6 +30,9 @@ export default function Ploddings() {
 
   return (
     <>
+      <Head>
+        <title>Ploddings | Mitchell Park - Portfolio</title>
+      </Head>
       <Header />
 			<Loader isLoading={isLoading} />
 			<div className="titleRow">

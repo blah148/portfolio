@@ -1,4 +1,5 @@
 // pages/resume.js
+import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './resume.module.css';
@@ -9,6 +10,9 @@ export default function Resume() {
 
   return (
     <>
+      <Head>
+        <title>Resume | Mitchell Park - Portfolio</title>
+      </Head>
       <Header />
       <main className={styles.mainContent}>
         <div className={styles.podOne}>

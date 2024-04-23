@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Head from 'next/head';
 import Footer from '../components/Footer';
 import Image from "next/image";
 import styles from './about.module.css';
@@ -27,6 +28,9 @@ export default function About() {
 
   return (
     <div>
+      <Head>
+        <title>About | Mitchell Park - Portfolio</title>
+      </Head>
       <Header />
 			<Loader isLoading={isLoading} />
       <div className="titleRow">

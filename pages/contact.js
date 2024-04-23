@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import Image from "next/image";
 import Loader from '../components/Loader';
 import Footer from '../components/Footer';
@@ -61,6 +62,9 @@ export default function Contact() {
 
 return (
   <>
+    <Head>
+      <title>Contact Page | Mitchell Park - Portfolio</title>
+    </Head>
     <Header />
     <div className={styles['contact-form']}>
       <Loader isLoading={isLoading} />
@@ -142,7 +146,7 @@ return (
 							</svg>
 							<label>mpark148@gmail.com</label>
 						</a>
-						<a href="https://www.google.com/maps?q=Calgary,Alberta,Canada" target="_blank" className={styles.contactInfoRow}>
+						<a title="Centre Street Bridge in Calgary, Alberta after its opening in 1916" href="https://www.google.com/maps?q=Calgary,Alberta,Canada" target="_blank" className={styles.contactInfoRow}>
 							<svg 
 								id="icon" 
 								xmlns="http://www.w3.org/2000/svg" 
@@ -169,6 +173,7 @@ return (
 								src="https://f005.backblazeb2.com/file/unique-files/centre-street-bridge(1).jpg"
 								width={280}
 								height={280}
+								alt="centre street bridge calgary after 1916"
 							/>
 						</a>
 					</div>

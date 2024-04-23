@@ -13,15 +13,15 @@ export default function Ploddings() {
     <>
       <Header />
 			<div className="titleRow">
-				<div className="titleMain">I make online experiences better with custom-built tools.</div>
-				<div className="titleSecondary">From modern JavaScript websites, to zero-cookie tracking systems, to automated email flows.</div>
+				<div className="titleMain">Fully-scaled supplement business</div>
+				<div className="titleSecondary">I inherited the reins of their largest paid advertising channel: Meta Ads, also leading split-tests for that traffic stream.</div>
 			</div>
 			<div className="imageRow">
-				<Image src="https://media.licdn.com/dms/image/D5603AQHJAatJxfi9vg/profile-displayphoto-shrink_800_800/0/1713058885794?e=1718841600&v=beta&t=y50f1jaxZbnybIuJXDGMMKCyvigAkoHkeptZNhKT65M" alt="Profile Image" width={500} height={500} />
+				<Image src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-featured-img-500h.png" alt="Profile Image" width={995} height={500} />
 				<Image
-					src="https://f005.backblazeb2.com/file/unique-files/background+(2052+x+500+px)(1).jpg"
+					src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-tile-background.png"
 					alt="Background Image"
-					width={1800} // Set the width of the image
+					width={2052} // Set the width of the image
 					height={500} // Set the height of the image
 				/>	
 			</div>

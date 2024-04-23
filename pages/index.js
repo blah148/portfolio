@@ -48,9 +48,9 @@ export default function Home() {
 						height={500} 
 						onLoadingComplete={handleImageLoaded} />
 			    <Image
-            src="https://f005.backblazeb2.com/file/unique-files/background+(2052+x+500+px)(1).jpg"
+            src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues.webp"
             alt="Background Image"
-            width={2052}
+            width={1697}
             height={500}
 						onLoadingComplete={handleImageLoaded} 
           />	
@@ -66,9 +66,9 @@ export default function Home() {
 						<div className="imagePreview">
 							<Link href="/projects/ploddings">
 								<Image
-									src="https://f005.backblazeb2.com/file/unique-files/portfolio-ploddings-featured-img.png"
+									src="https://f005.backblazeb2.com/file/unique-files/portfolio-ploddings-featured-img-500h.webp"
 									alt="ploddings - featured image"
-									width={638}
+									width={995}
 									height={384}
 									onLoadingComplete={handleImageLoaded} 
 								/>
@@ -81,12 +81,12 @@ export default function Home() {
 							<div className="gridDescription">From 100s to over 10,000 hits-per-month, I undertook a new blog strategy & built an automated email flow for organic leads.</div>
 							<div className="button"><Link href="/projects/spotdogwalkers">View Project</Link></div>
 						</div>
-						<div className="imagePreview">
+						<div className="imagePreview center">
 							<Link href="/projects/spotdogwalkers">
 							<Image
-								src="https://f005.backblazeb2.com/file/unique-files/portfolio-spot-featured-img.png"
+								src="https://f005.backblazeb2.com/file/unique-files/portfolio-spotdogwalkers-featured-img-500h.webp"
 								alt="spot dog walkers - featured image"
-								width={638}
+								width={995}
 								height={384}
 								onLoadingComplete={handleImageLoaded} 
 							/>
@@ -99,12 +99,12 @@ export default function Home() {
 							<div className="gridDescription">We were spending between $12,000 to $18,000 per day on Meta Ads, and I worked as the primary Meta Ads Specialist.</div>
 							<div className="button"><Link href="/projects/algaecal">View Project</Link></div>
 						</div>
-						<div className="imagePreview">
+						<div className="imagePreview center">
 							<Link href="/projects/algaecal">
 								<Image
-									src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-featured-img.png"
+									src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-featured-img-500h.webp"
 									alt="algaecal - featured image"
-									width={638}
+									width={995}
 									height={384}
 									onLoadingComplete={handleImageLoaded} 
 								/>

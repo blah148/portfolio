@@ -38,3 +38,4 @@ next-env.d.ts
 
 # Ignore .env files
 .env
+.env.swp

@@ -35,7 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
 # Ignore .env files
 .env
-.env.swp
+
+# Ignore .swp files
+*.swp
+

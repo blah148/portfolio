@@ -1,9 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const Footer = () => {
+
+	const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Function to detect if the device is mobile
+    const detectMobile = () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
+
+    // Update state based on device type
+    setIsMobile(detectMobile());
+  }, []);
+
+  useEffect(() => {
+  }, []);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.topLevel}>
@@ -15,7 +30,11 @@ const Footer = () => {
 						height={60}
 					/>
         </Link>
-				<div className={styles.blurb}>Operating & making digital tools that are like music to your ears</div>
+				<div className={styles.navigation}>
+					<Link href="/about">About</Link>
+					<Link href="/resume">Résumé</Link>
+					<Link href="/contact">Contact</Link>
+				</div>		
       </div>
       <a target="_blank" className={styles.socialIcon} href="https://www.linkedin.com/in/mitchell-park/">
         <svg version="1.1" id="icon" x="0px" y="0px"

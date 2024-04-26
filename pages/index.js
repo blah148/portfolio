@@ -41,23 +41,6 @@ export default function Home() {
 					<div className="titleMain">Digital experiences that stick.</div>
 					<div className="titleSecondary">Mitchell Park - Porfolio</div>
 				</div>
-				<div className="imageRow">
-					<Image 
-						src="https://f005.backblazeb2.com/file/unique-files/linkedIn-prof-pic.jpeg" alt="Profile Image" 
-						width={500} 
-						height={500} 
-						onLoad={handleImageLoaded}
-						priority
-					/>
-			    <Image
-            src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues.webp"
-            alt="Background Image"
-            width={1697}
-            height={500}
-						onLoad={handleImageLoaded} 
-						priority
-          />	
-				</div>
 				<div className="projectsRow">
 					<div className="specialTitle">Favorite projects</div>
 					<div className="gridObject">

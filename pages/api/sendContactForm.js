@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       to: 'mpark148@gmail.com', // Recipient email address
       from: 'no-reply@ploddings.com', // Your verified sender
       subject: subject || 'New Form Submission - Portfolio Website', // Use provided subject or default
-      text: `You have received a new contact form submission.\n\nFrom: ${fname || 'N/A'} (${email})\nSubject: ${subject || 'N/A'}\nMessage: ${message}`,
+      text: `You have received a new Portfolio contact form submission.\n\nFrom: ${fname || 'N/A'} (${email})\nSubject: ${subject || 'N/A'}\nMessage: ${message}`,
       html: `<h4>You have received a new contact form submission.</h4><p><strong>From:</strong> ${fname || 'N/A'} (${email})<br><strong>Subject:</strong> ${subject || 'N/A'}<br><strong>Message:</strong> ${message}</p>`,
     };
     // Send the email

@@ -1,9 +1,9 @@
   .loaderContainer {
     height: 7px; /* Adjusted to your specific needs */
     margin: 0;
-		position: absolute;
-		top: 35px;
-		left: 160px;
+		position: fixed;
+		top: 5px;
+		left: 100px;
   }
   
   .ldsEllipsis {

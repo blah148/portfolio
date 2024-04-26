@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
   }, []);
 	
-  const totalImages = isMobile ? 3 : 4;
+  const totalImages = isMobile ? 1 : 2;
   const imagesLoadedRef = useRef(0);
   const [isLoading, setIsLoading] = useState(true);
 

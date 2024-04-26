@@ -52,12 +52,11 @@ export default function Home() {
 						<div className="imagePreview">
 							<Link href="/projects/ploddings">
 								<Image
-									src="https://f005.backblazeb2.com/file/unique-files/portfolio-ploddings-featured-img-500h.webp"
+									src="https://f005.backblazeb2.com/file/unique-files/portfolio-ploddings-featured-img-620x312-1.webp"
 									alt="ploddings - featured image"
-									width={995}
-									height={384}
+									width={620}
+									height={312}
 									onLoad={handleImageLoaded} 
-									priority
 								/>
 							</Link>
 						</div>
@@ -71,12 +70,11 @@ export default function Home() {
 						<div className="imagePreview center">
 							<Link href="/projects/algaecal">
 								<Image
-									src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-featured-img-500h.webp"
+									src="https://f005.backblazeb2.com/file/unique-files/portfolio-algaecal-featured-img-620x312-1.webp"
 									alt="algaecal - featured image"
-									width={995}
-									height={384}
+									width={620}
+									height={312}
 									onLoad={handleImageLoaded} 
-									priority
 								/>
 							</Link>
 						</div>

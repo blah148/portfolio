@@ -25,6 +25,20 @@ export default function Home() {
     console.error('Image failed to load', error);
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to detect if the device is mobile
+    const detectMobile = () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
+
+    // Update state based on device type
+    setIsMobile(detectMobile());
+  }, []);
+
+  useEffect(() => {
+  }, []);
 
   return (
     <>
@@ -39,7 +53,25 @@ export default function Home() {
 				<Loader isLoading={isLoading} />
 				<div className="titleRow">
 					<div className="titleMain">Digital experiences that stick.</div>
-					<div className="titleSecondary">Mitchell Park - Porfolio</div>
+					<div className="titleSecondary">Mitchell Park - Portfolio</div>
+				</div>
+				<div className="imageRow">
+					<Image 
+						src="https://f005.backblazeb2.com/file/unique-files/linkedIn-prof-pic.webp" 
+						alt="Profile Image" 
+						width={450} 
+						height={450} 
+						onLoadingComplete={handleImageLoaded}
+					/>
+					{!isMobile && (
+						<Image
+							src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues-1_1371x450-1.webp"
+							alt="Background Image"
+							width={1571}
+							height={450}
+							onLoadingComplete={handleImageLoaded}
+						/>  
+					)}
 				</div>
 				<div className="projectsRow">
 					<div className="specialTitle">Favorite projects</div>

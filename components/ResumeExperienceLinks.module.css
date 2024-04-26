@@ -41,8 +41,7 @@ a:hover .icon.nonproject {
 @media (min-width: 768px) {
   /* Adjustments for screens wider than mobile */
   .iconContainer:hover::after {
-    max-width: 100px; /* Maximum width for tooltip */
-    width: auto; /* Auto width for wider screens */
+    width: 200px; /* Maximum width for tooltip */
   }
 }
 

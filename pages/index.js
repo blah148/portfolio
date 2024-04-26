@@ -7,8 +7,22 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Home() {
+	
+	const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Function to detect if the device is mobile
+    const detectMobile = () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
 
-  const totalImages = 4;
+    // Update state based on device type
+    setIsMobile(detectMobile());
+  }, []);
+
+  useEffect(() => {
+  }, []);
+	
+  const totalImages = isMobile ? 3 : 4;
   const imagesLoadedRef = useRef(0);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,21 +38,6 @@ export default function Home() {
   const handleImageError = (error) => {
     console.error('Image failed to load', error);
   };
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Function to detect if the device is mobile
-    const detectMobile = () => {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    };
-
-    // Update state based on device type
-    setIsMobile(detectMobile());
-  }, []);
-
-  useEffect(() => {
-  }, []);
 
   return (
     <>
@@ -65,9 +64,9 @@ export default function Home() {
 					/>
 					{!isMobile && (
 						<Image
-							src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues-1_1371x450-1.webp"
+							src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues-2_1524x450.webp"
 							alt="Background Image"
-							width={1571}
+							width={1524}
 							height={450}
 							onLoadingComplete={handleImageLoaded}
 						/>  

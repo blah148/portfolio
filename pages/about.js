@@ -8,7 +8,21 @@ import React, { useEffect, useState, useRef } from 'react';
 
 export default function About() {
 
-  const totalImages = 2;
+	const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Function to detect if the device is mobile
+    const detectMobile = () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
+
+    // Update state based on device type
+    setIsMobile(detectMobile());
+  }, []);
+
+  useEffect(() => {
+  }, []);
+	
+  const totalImages = isMobile ? 1 : 2;
   const imagesLoadedRef = useRef(0);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,19 +53,21 @@ export default function About() {
       </div>
       <div className="imageRow">
         <Image 
-					src="https://media.licdn.com/dms/image/D5603AQH1n3OXjkQ6ig/profile-displayphoto-shrink_400_400/0/1713896637728?e=1719446400&v=beta&t=8WL7XCUr22IMcXMzCtcgSfNd1T8vbn98DLJWhZocFyk" 
+					src="https://f005.backblazeb2.com/file/unique-files/linkedIn-prof-pic.webp" 
 					alt="Profile Image" 
-					width={500} 
-					height={500} 
+					width={450} 
+					height={450} 
 					onLoadingComplete={handleImageLoaded}
 				/>
-        <Image
-          src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues.webp"
-          alt="Background Image"
-          width={1697}
-          height={500}
-					onLoadingComplete={handleImageLoaded}
-        />  
+				{!isMobile && (
+					<Image
+						src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues-2_1524x450.webp"
+						alt="Background Image"
+						width={1524}
+						height={450}
+						onLoadingComplete={handleImageLoaded}
+					/>  
+				)}
       </div>
       <div className={styles.textBody}>
         <h2>How I solve problems</h2>

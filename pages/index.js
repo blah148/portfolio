@@ -52,7 +52,7 @@ export default function Home() {
 				<Loader isLoading={isLoading} />
 				<div className="titleRow">
 					<div className="titleMain">Digital experiences that stick.</div>
-					<div className="titleSecondary">Mitchell Park - Portfolio</div>
+					<div className="titleSecondary">Mitchell Park / Blah148</div>
 				</div>
 				<div className="imageRow">
 					<Image 

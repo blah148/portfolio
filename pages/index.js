@@ -77,7 +77,7 @@ export default function Home() {
 					<div className="gridObject">
 						<div className="textInfo">
 							<div className="gridTitle">pLODDINGS</div>
-							<div className="gridDescription">Building connections between impulses to understand historical music & the need to replenish its origins.</div>
+							<div className="gridDescription">Building connections between impulses to understand historical music & the need to replenish its roots</div>
 							<div className="button"><Link href="/projects/ploddings">View Project</Link></div>
 						</div>
 						<div className="imagePreview">

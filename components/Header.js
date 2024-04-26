@@ -30,7 +30,13 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="https://f005.backblazeb2.com/file/ploddings-threads/featured_img_200px/lead-belly.webp" alt="Logo" width={75} height={75} />
+          <Image 
+						src="https://f005.backblazeb2.com/file/ploddings-threads/featured_img_200px/lead-belly.webp" 
+						alt="Logo" 
+						width={75} 
+						height={75} 
+						priority
+				  />
         </Link>
       </div>
       {isSmallScreen ? (

@@ -1,6 +1,9 @@
 module.exports = {
   images: {
-    domains: ['f005.backblazeb2.com', 'media.licdn.com'], // Add the hostname here
+    remotePatterns: [
+      { hostname: 'f005.backblazeb2.com' },
+      { hostname: 'media.licdn.com' }
+    ],
   },
 };
 

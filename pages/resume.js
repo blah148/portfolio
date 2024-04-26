@@ -19,10 +19,10 @@ export default function Resume() {
           <h1>The overview</h1>
           <div className={styles.podOneColumnTwo}>
             <p>
-              I've been helping serve businesses a bigger slice of their users' online attention since 2018. Today, I orient myself to the needle-movers of the teams I integrate with, increasing the efficiency of their marketing toolchains, so they're less reliant on 3rd-party apps, while leaving an imprint of quality that sticks in the minds of users.
+              A passionate & aspiring creator, grounded in the prevailing understandings of science, and curious about how boundaries can evolve & shift.
             </p>
             <div className={styles.podOneColumnTwoContactRow}>
-              <a title="Let's chat? I'm free from 10am to 4pm MST." href="tel:+14036699921" className={styles.contactInfoRow}>
+              <a title="I can typically be reached for a call between 10am - 10pm MST." href="tel:+14036699921" className={styles.contactInfoRow}>
                 <svg id="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <title>phone--filled</title>
                   <path
@@ -31,7 +31,7 @@ export default function Resume() {
                 </svg>
                 <label>+1 (403) 669-9921</label>
               </a>
-              <a href="mailto:mpark148@gmail.com" className={styles.contactInfoRow}>
+              <a href="mailto:mpark148@gmail.com" title="Email works too. I'll read it within an hour & reply within 8 (or better)." className={styles.contactInfoRow}>
                 <svg
                   id="icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function Resume() {
                 </svg>
                 <label>mpark148@gmail.com</label>
               </a>
-              <a href="https://www.google.com/maps?q=Calgary,Alberta,Canada" target="_blank" className={styles.contactInfoRow}>
+              <a title="Born in 1994, raised in Alberta, Canada. Most of that in Calgary." href="https://www.google.com/maps?q=Calgary,Alberta,Canada" target="_blank" className={styles.contactInfoRow}>
                 <svg
                   id="icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function Resume() {
                     <div className={styles.organization}>Spot Dog Walkers</div>
                     <div className={styles.timespan}>Sep 2021 - Oct 2022</div>
                   </div>
-                  <ResumeExperienceLinks column={true} companyWebsite="https://www.spotdogwalkers.com/" referenceName="John Minchin" referencePosition="Co-Founder, Owner" referencePhone="1-403-889-5139" projectSummary="/projects/spotdogwalkers" />
+                  <ResumeExperienceLinks column={true} companyWebsite="https://www.spotdogwalkers.com/" referenceName="John Minchin" referencePosition="Co-Founder, Owner" referencePhone="1-403-889-5139" />
                 </div>
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>

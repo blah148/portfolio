@@ -7,6 +7,14 @@
 	padding: 28px 56px;
 }
 
+@media (max-width: 768px) {
+
+	.textBody {
+		padding: 0 16px;
+		margin: 0 0 54px 0;
+	}
+}
+
 .textBody h2 {
 	font-size: 36px;
 	margin: 30px auto 6px auto;

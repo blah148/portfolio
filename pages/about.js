@@ -34,8 +34,8 @@ export default function About() {
       <Header />
 			<Loader isLoading={isLoading} />
       <div className="titleRow">
-        <div className="titleMain">Stuck figuring things out by ear?</div>
-        <div className="titleSecondary">Hit all the right notes by starting with the big stuff, then zooming into the small stuff.</div>
+        <div className="titleMain">About me</div>
+        <div className="titleSecondary">How I work & my origins</div>
       </div>
       <div className="imageRow">
         <Image 

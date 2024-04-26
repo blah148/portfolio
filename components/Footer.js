@@ -15,7 +15,7 @@ const Footer = () => {
 						height={60}
 					/>
         </Link>
-				<div className={styles.blurb}>Digital messaging that's like music to your users' ears</div>
+				<div className={styles.blurb}>Operating & making digital tools that are like music to your ears</div>
       </div>
       <a target="_blank" className={styles.socialIcon} href="https://www.linkedin.com/in/mitchell-park/">
         <svg version="1.1" id="icon" x="0px" y="0px"
@@ -27,7 +27,7 @@ const Footer = () => {
           <rect id="_x3C_Transparent_Rectangle_x3E_" y="0" className="st0" width="32" height="32"/>
         </svg>
       </a>
-			<div style={{textAlign: "center"}}>Custom-built with NextJS</div>
+			<div style={{textAlign: "center"}}>Built with NextJS</div>
     </footer>
   );
 };

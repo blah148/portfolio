@@ -38,8 +38,8 @@ export default function Home() {
       <main >
 				<Loader isLoading={isLoading} />
 				<div className="titleRow">
-					<div className="titleMain">dIGITAL Experiences that Stick.</div>
-					<div className="titleSecondary">porfolio</div>
+					<div className="titleMain">Digital experiences that stick.</div>
+					<div className="titleSecondary">Mitchell Park - Porfolio</div>
 				</div>
 				<div className="imageRow">
 					<Image 
@@ -59,11 +59,11 @@ export default function Home() {
           />	
 				</div>
 				<div className="projectsRow">
-					<div className="specialTitle">pAST Work</div>
+					<div className="specialTitle">Favorite projects</div>
 					<div className="gridObject">
 						<div className="textInfo">
 							<div className="gridTitle">pLODDINGS</div>
-							<div className="gridDescription">building connections between impulses to understand historical music & the need to replenish its origins.</div>
+							<div className="gridDescription">Building connections between impulses to understand historical music & the need to replenish its origins.</div>
 							<div className="button"><Link href="/projects/ploddings">View Project</Link></div>
 						</div>
 						<div className="imagePreview">
@@ -82,7 +82,7 @@ export default function Home() {
 					<div className="gridObject">
 						<div className="textInfo">
 							<div className="gridTitle">aLGAECAL</div>
-							<div className="gridDescription">an 'up-to-scale' business for a physical product, relying upon digital lead generation channels</div>
+							<div className="gridDescription">An 'up-to-scale' business for a physical product, relying upon digital lead generation channels</div>
 							<div className="button"><Link href="/projects/algaecal">View Project</Link></div>
 						</div>
 						<div className="imagePreview center">

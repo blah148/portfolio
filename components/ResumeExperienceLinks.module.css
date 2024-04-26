@@ -24,15 +24,25 @@ a:hover .icon.nonproject {
 .iconContainer:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: calc(100% + 4px);
-  left: 50%;
-  transform: translateX(-50%);
+	top: calc(100% + 4px);
+  transform: translateX(-100%);
+  width: 200px; /* Width for mobile screens */
   padding: 4px 8px;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   font-size: 16px;
-  white-space: nowrap;
+  white-space: normal; /* Allow text wrapping */
+  word-wrap: break-word; /* Enable word wrapping */
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+  /* Adjustments for screens wider than mobile */
+  .iconContainer:hover::after {
+    max-width: 100px; /* Maximum width for tooltip */
+    width: auto; /* Auto width for wider screens */
+  }
 }
 
 .transparentRect {

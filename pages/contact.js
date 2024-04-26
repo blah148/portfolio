@@ -69,8 +69,8 @@ return (
     <div className={styles['contact-form']}>
       <Loader isLoading={isLoading} />
       <div className={styles.formBox}>
-        <h1>Let's have a chat?</h1>
-				<div style={{fontSize: "20px"}}>I would love to connect with you. Within 12 hours (at most), you'll see my reply in your inbox.</div>
+        <h1>Let's talk about your project</h1>
+				<div style={{fontSize: "20px"}}>You will find my reply message in your inbox within 12 hours (or better).</div>
         <div className={styles.contactContent}>
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">

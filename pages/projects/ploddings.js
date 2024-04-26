@@ -36,8 +36,8 @@ export default function Ploddings() {
       <Header />
 			<Loader isLoading={isLoading} />
 			<div className="titleRow">
-				<div className="titleMain">aMERICANA</div>
-				<div className="titleSecondary"></div>
+				<div className="titleMain">Ploddings</div>
+				<div className="titleSecondary">Cultivating self-sustenance within the pre-war blues guitar community using digital tools</div>
 			</div>
 			<div className="imageRow">
 				<Image 

@@ -125,7 +125,7 @@ return (
             </button>
           </form>
 					<div className={styles.contactInfo}>
-						<a title="I'm free from 10am to 4pm MST" href="tel:+14036699921" className={styles.contactInfoRow}>
+						<a title="I'm free from 10am to 10pm MST" href="tel:+14036699921" className={styles.contactInfoRow}>
 							<svg id="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 									<title>phone--filled</title>
 									<path

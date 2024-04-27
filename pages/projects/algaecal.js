@@ -24,7 +24,7 @@ export default function AlgaeCal() {
   useEffect(() => {
   }, []);
 	
-  const totalImages = isMobile ? 1 : 2;
+  const totalImages = isMobile ? 1 : 1;
   const imagesLoadedRef = useRef(0);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -62,14 +62,15 @@ export default function AlgaeCal() {
 					priority
 				/>
 				{!isMobile && (
-					<div style={{marginLeft: "5px"}}>
-						<Image
-							src="https://f005.backblazeb2.com/file/unique-files/algaecal-cover-photo.webp"
-							alt="Background Image"
-							width={1524}
-							height={450}
-							onLoadingComplete={handleImageLoaded}
-						/>  
+					<div 
+						style={{
+							marginLeft: "5px",
+							backgroundImage: "url('https://f005.backblazeb2.com/file/unique-files/algaecal-tile-background(1).webp')",
+							backgroundRepeat: 'repeat',
+							width: '100%', // Adjust width as needed
+							height: '450px' // Adjust height as needed
+						}}
+					>
 					</div>
 				)}
 			</div>

@@ -63,14 +63,15 @@ export default function Ploddings() {
 					priority
 				 />
 				{!isMobile && (
-					<div style={{marginLeft: "5px"}}>
-						<Image
-							src="https://f005.backblazeb2.com/file/unique-files/ploddings-cover-photo.webp"
-							alt="Background Image"
-							width={1524}
-							height={450}
-							onLoadingComplete={handleImageLoaded}
-						/>  
+					<div 
+						style={{
+							marginLeft: "5px",
+							backgroundImage: "url('https://f005.backblazeb2.com/file/unique-files/ploddings-tile-background(1).webp')",
+							backgroundRepeat: 'repeat',
+							width: '100%', // Adjust width as needed
+							height: '450px' // Adjust height as needed
+						}}
+					>
 					</div>
 				)}
 			</div>

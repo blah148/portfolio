@@ -24,7 +24,7 @@ export default function Ploddings() {
   useEffect(() => {
   }, []);
 	
-  const totalImages = isMobile ? 1 : 2;
+  const totalImages = isMobile ? 1 : 1;
   const imagesLoadedRef = useRef(0);
   const [isLoading, setIsLoading] = useState(true);
 

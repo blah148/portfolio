@@ -73,6 +73,7 @@ export default function Resume() {
             <h2>Skills</h2>
             <ul>
               <li>JavaScript</li>
+							<li>PostgreSQL/Supabase</li>
               <li>HTML & CSS</li>
               <li>UI/UX Design</li>
               <li>Tracking & Analytics</li>

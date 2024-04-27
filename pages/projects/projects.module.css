@@ -8,7 +8,7 @@
 @media (min-width: 1366px) {
 	.infoBox {
 		display: grid;
-		grid-template-columns: 1fr 2.5fr;
+		grid-template-columns: 1fr 1.8fr;
 		column-gap: 64px;
 		margin: 0 0 54px 0;
 	}
@@ -41,8 +41,8 @@
 	margin-top: 0;
 }
 .infoBox h3 {
-	font-size: 24px;
-	margin: 0 0 12px 0;
+	font-size: 22px;
+	margin: 0 0 4px 0;
 }
 .infoBoxColumnOneSection div {
 	margin: 0 0 26px 0;

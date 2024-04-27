@@ -63,7 +63,7 @@ export default function AlgaeCal() {
 				/>
 				{!isMobile && (
 					<Image
-						src="https://f005.backblazeb2.com/file/unique-files/cover-background_blues-2_1524x450.webp"
+						src="https://f005.backblazeb2.com/file/unique-files/cover-featured-image-new.webp.webp"
 						alt="Background Image"
 						width={1524}
 						height={450}
@@ -77,6 +77,10 @@ export default function AlgaeCal() {
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Deliverables</h3>
 							<div>Meta Ads. Analytics. A/B testing.</div>
+						</div>
+						<div className={styles.infoBoxColumnOneSection}>
+							<h3>Tools</h3>
+							<div>Meta Ads, Google Optimize, Google Data Studio</div>
 						</div>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Client</h3>

@@ -84,6 +84,10 @@ export default function Ploddings() {
 							<div>Mt. Zion Memorial Fund</div>
 						</div>
 						<div className={styles.infoBoxColumnOneSection}>
+							<h3>Tools</h3>
+							<div>NextJS, PostgreSQL, Stripe, SendGrid</div>
+						</div>
+						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Year</h3>
 							<div>2024</div>
 						</div>
@@ -94,7 +98,7 @@ export default function Ploddings() {
 						  <ResumeExperienceLinks column={false} companyWebsite="https://ploddings.com" referenceName="T. DeWayne Moore" referencePosition="Assistant Professor of History, Texas A&M University" referencePhone="1-615-663-7858" />
             </div>
 						<p>Between two gulfs, atop one, a preservationist entity beliegered by financial straits, and atop the other, droves of individuals curious about American stringed-instrument playing, Ploddings is a structure that promotes the mutual support of these complementary entities, envisioning a self-sustaining coexistence in which they are united. </p>
-						<p>Ploddings exists as a non-profit project, in which users pay for digital learning tools, such as stringed-instrument MIDI tablature of & slow-downer / pitch-shifter software</p>
+						<p>Ploddings exists as a non-profit project, in which users pay for digital learning tools, such as stringed-instrument MIDI tablature of & slow-downer / pitch-shifter software.</p>
 					</div>
 				</div>
 <div className={styles.contentBody}>

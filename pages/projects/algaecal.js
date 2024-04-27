@@ -62,13 +62,15 @@ export default function AlgaeCal() {
 					priority
 				/>
 				{!isMobile && (
-					<Image
-						src="https://f005.backblazeb2.com/file/unique-files/cover-featured-image-new.webp.webp"
-						alt="Background Image"
-						width={1524}
-						height={450}
-						onLoadingComplete={handleImageLoaded}
-					/>  
+					<div style={{marginLeft: "5px"}}>
+						<Image
+							src="https://f005.backblazeb2.com/file/unique-files/algaecal-cover-photo.webp"
+							alt="Background Image"
+							width={1524}
+							height={450}
+							onLoadingComplete={handleImageLoaded}
+						/>  
+					</div>
 				)}
 			</div>
 			<div className={styles.mainContent}>

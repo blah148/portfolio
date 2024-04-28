@@ -80,7 +80,7 @@ export default function Ploddings() {
 					<div className={styles.infoBoxColumnOne}>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Deliverables</h3>
-							<div>Stakeholder management. Website design.</div>
+							<div>Stakeholder management. Web development.</div>
 						</div>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Client</h3>
@@ -88,7 +88,7 @@ export default function Ploddings() {
 						</div>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Tools</h3>
-							<div>NextJS, PostgreSQL, Stripe, SendGrid</div>
+							<div>NextJS, PostgreSQL, Git, Vim</div>
 						</div>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Year</h3>

@@ -24,7 +24,6 @@ export default function Resume() {
             <div className={styles.podOneColumnTwoContactRow}>
               <a title="I can typically be reached for a call between 10am - 10pm MST." href="tel:+14036699921" className={styles.contactInfoRow}>
                 <svg id="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                  <title>phone--filled</title>
                   <path
                     d="M20.33,21.48l2.24-2.24a2.19,2.19,0,0,1,2.34-.48l2.73,1.09a2.18,2.18,0,0,1,1.36,2v5A2.17,2.17,0,0,1,26.72,29C7.59,27.81,3.73,11.61,3,5.41A2.17,2.17,0,0,1,5.17,3H10a2.16,2.16,0,0,1,2,1.36l1.09,2.73a2.16,2.16,0,0,1-.47,2.34l-2.24,2.24S11.67,20.4,20.33,21.48Z"
                   />
@@ -36,7 +35,6 @@ export default function Resume() {
                   id="icon"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32">
-                  <title>send--alt--filled</title>
                   <path
                     d="M27.71,4.29a1,1,0,0,0-1.05-.23l-22,8a1,1,0,0,0,0,1.87l8.59,3.43L19.59,11,21,12.41l-6.37,6.37,3.44,8.59A1,1,0,0,0,19,28h0a1,1,0,0,0,.92-.66l8-22A1,1,0,0,0,27.71,4.29Z"
                   />

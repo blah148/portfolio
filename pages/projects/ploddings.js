@@ -80,7 +80,7 @@ export default function Ploddings() {
 					<div className={styles.infoBoxColumnOne}>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Deliverables</h3>
-							<div>Stakeholder management. Web development.</div>
+							<div>Stakeholder management. Full stack development. SEO.</div>
 						</div>
 						<div className={styles.infoBoxColumnOneSection}>
 							<h3>Client</h3>

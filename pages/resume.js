@@ -116,7 +116,7 @@ export default function Resume() {
               <div className={styles.experiencePodsContainer}>
                 <div className={styles.experiencePod}>
                   <div className={styles.experienceInfo}>
-                    <div className={styles.title}>Creator & fundraiser</div>
+                    <div className={styles.title}>Full Stack Developer</div>
                     <div className={styles.organization}>Ploddings</div>
                     <div className={styles.timespan}>Dec 2018 - present</div>
                   </div>
@@ -143,7 +143,7 @@ export default function Resume() {
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>
                   <div className={styles.experienceInfo}>
-                    <div className={styles.title}>Paid media specialist</div>
+                    <div className={styles.title}>Paid Media Specialist</div>
                     <div className={styles.organization}>Jetfuel Agency</div>
                     <div className={styles.timespan}>Oct 2019 to Jan 2020</div>
                   </div>
@@ -152,7 +152,7 @@ export default function Resume() {
                 <div className="separator"></div>
                 <div className={styles.experiencePod}>
                   <div className={styles.experienceInfo}>
-                    <div className={styles.title}>Paid media specialist</div>
+                    <div className={styles.title}>Paid Media Specialist</div>
                     <div className={styles.organization}>AlgaeCal</div>
                     <div className={styles.timespan}>Oct 2018 - Sep 2019</div>
                   </div>

@@ -5,5 +5,15 @@ module.exports = {
       { hostname: 'media.licdn.com' }
     ],
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/projects',
+        destination: '/',
+        permanent: false, // Set to true for permanent redirection (HTTP status code 301)
+      },
+    ];
+  },
 };
 

@@ -60,7 +60,7 @@ export default function Home() {
 						alt="Profile Image" 
 						width={450} 
 						height={450} 
-						onLoadingComplete={handleImageLoaded}
+						onLoad={handleImageLoaded}
 					/>
 				{!isMobile && (
 					<div 

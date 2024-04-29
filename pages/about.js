@@ -57,7 +57,7 @@ export default function About() {
 					alt="Profile Image" 
 					width={450} 
 					height={450} 
-					onLoadingComplete={handleImageLoaded}
+					onLoad={handleImageLoaded}
 				/>
 				{!isMobile && (
 					<div 

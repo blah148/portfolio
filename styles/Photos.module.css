@@ -1,0 +1,16 @@
+.masonryGrid {
+  column-count: 3; /* Creates 3 columns */
+  column-gap: 16px; /* Space between the columns */
+}
+
+.masonryItem {
+  break-inside: avoid; /* Prevents images from breaking across columns */
+  margin-bottom: 16px; /* Space between rows */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  cursor: pointer; /* Show pointer to indicate image is clickable */
+}
+

@@ -1,6 +1,6 @@
 .masonryGrid {
   column-count: 3; /* Default to 3 columns for desktop */
-  column-gap: 16px; /* Space between the columns */
+  column-gap: 22px; /* Space between the columns */
 }
 
 .masonryItem {
@@ -13,6 +13,7 @@
   height: auto;
   cursor: pointer; /* Show pointer to indicate image is clickable */
   transition: opacity 0.5s ease; /* Smooth transition for opacity */
+	border-radius: 5px;
 }
 
 /* Media query for tablets (2 columns) */

@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: 'Baloo2-Regular';
+  font-family: 'Cutive Mono', monospace;
 	background-color: #f6f9f9;
 }
 .bodyA {
@@ -241,45 +241,40 @@ svg.menuIcon:hover path, svg.notIcon:hover path {
 /* styles/fonts.css */
 
 @font-face {
-  font-family: 'Baloo2-Bold';
-  src: url('./fonts/Baloo2-Bold.ttf') format('truetype');
+  font-family: 'Space Mono';
+  src: url('./fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./fonts/SpaceMono-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Baloo2-Medium';
-  src: url('./fonts/Baloo2-Medium.ttf') format('truetype');
+  font-family: 'Space Mono';
+  src: url('./fonts/SpaceMono-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Cutive Mono Font Face */
+@font-face {
+  font-family: 'Cutive Mono';
+  src: url('./fonts/CutiveMono-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Baloo2-SemiBold';
-  src: url('./fonts/Baloo2-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Baloo2-ExtraBold';
-  src: url('./fonts/Baloo2-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Baloo2-Regular';
-  src: url('./fonts/Baloo2-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('./fonts/Inter-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 

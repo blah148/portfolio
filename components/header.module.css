@@ -1,71 +1,53 @@
-/* header.module.css */
-
-.logo {
-  text-align: center;
-  margin: 0 auto 0 0;
-}
-
-.logo a {
-  display: inline-block;
-  border-radius: 8px;
-  transition: transform 0.1s ease;
-}
-
-.logo a:hover {
-  transform: scale(1.05);
-	opacity: 0.85;
-}
-
-.logo img {
-  border-radius: 5px;
-}
-
-@media (min-width: 1366px) {
-	.header {
-	  padding: 1rem 62px;
-	}
-}
-@media (max-width: 1365px) {
-	.header {
-		padding: 1rem 14px;
-	}
-}
-
+/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  margin: 20px 20px 20px 20px;
+  background-color: transparent; /* Set background to transparent */
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 40px; /* Align the logo to the top left */
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .navLinks {
-	display: flex;
-	align-content: center;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 40px;
 }
+
 .navLinks a {
-	font-size: 22px;
-	margin: auto 16px;
-	text-decoration: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
-.normalLink:hover {
-	opacity: 0.6;
+
+.navLinks a:hover {
+  text-decoration: underline;
 }
-.navLinks .button {
-	background: linear-gradient(165deg,#26d6c4,#10b1d3);
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 15px #1cc5cb80;
-  color: #fff;
+
+.socialLinks {
+  position: absolute;
+  right: 40px; /* Align the social links to the top right */
+  display: flex;
+  gap: 15px;
+}
+
+.socialLinks img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0); /* Inverts the icons to white */
   cursor: pointer;
-  margin: 12px 0 0 0;
-  text-align: center;
-	margin: auto 0 auto 8px;
-}
-.button:hover {
-	filter: saturate(1.4);
-
 }
 
-.button a {
-	color: white;
+.socialLinks img:hover {
+  opacity: 0.8;
 }
+

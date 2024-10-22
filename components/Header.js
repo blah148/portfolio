@@ -1,58 +1,47 @@
-// Header.js
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import Menu from './Menu';
-import styles from './header.module.css';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { supabase } from '../lib/supabaseClient'; // Assuming you're using Supabase for social links
+import styles from './header.module.css'; // Import the CSS module
 
-const Header = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+export default function Header() {
+  const [socialLinks, setSocialLinks] = useState([]);
 
+  // Fetch social links from the Supabase table
   useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
+    const fetchSocialLinks = async () => {
+      const { data, error } = await supabase
+        .from('social_links')
+        .select('name, icon_link, icon_alt_text, destination_url');
+      if (error) console.error(error);
+      else setSocialLinks(data);
     };
 
-    // Set initial screen width
-    setIsSmallScreen(window.innerWidth < 768);
-
-    // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup event listener
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    fetchSocialLinks();
   }, []);
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <Link href="/">
-          <Image 
-						src="https://f005.backblazeb2.com/file/ploddings-threads/featured_img_200px/lead-belly.webp" 
-						alt="Logo" 
-						width={75} 
-						height={75} 
-						priority
-				  />
-        </Link>
+      {/* Logo Section */}
+      <div className={styles.logo}>Mitch Park - blah148</div>
+
+      {/* Navigation Links */}
+      <nav className={styles.navLinks}>
+        <Link href="/">Home</Link>
+        <Link href="/music">Music</Link>
+        <Link href="/tour">Tour</Link>
+        <Link href="/contact">Contact</Link>
+      </nav>
+
+      {/* Social Links */}
+      <div className={styles.socialLinks}>
+        {socialLinks.map((link) => (
+          <a key={link.name} href={link.destination_url} target="_blank" rel="noopener noreferrer">
+            <Image src={link.icon_link} alt={link.icon_alt_text} width={24} height={24} />
+          </a>
+        ))}
       </div>
-      {isSmallScreen ? (
-        <Menu />
-      ) : (
-        <div className={styles.navLinks}>
-          <div className={styles.normalLink}><Link href="/about">About</Link></div>
-					<div className={styles.normalLink}><Link href="/resume">Résumé</Link></div>
-					<div className={styles.button}>
-            <Link href="/contact">Contact</Link>
-					</div>
-        </div>
-      )}
     </header>
   );
-};
-
-export default Header;
+}
 

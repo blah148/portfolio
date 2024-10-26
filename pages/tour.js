@@ -1,4 +1,5 @@
 import { supabase } from '../lib/supabaseClient';
+import Head from 'next/head'
 import { useState, useEffect } from 'react';
 
 export default function Tour() {
@@ -24,6 +25,12 @@ export default function Tour() {
 
   return (
     <div>
+      <Head>
+        <title>Mitchell Park | Portfolio</title>
+        <meta name="description" content="Portfolio of Mitchell Park" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </Head>
       <h1>Past Tours</h1>
       {tourData.length === 0 ? (
         <p>No past tours available.</p>

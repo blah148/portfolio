@@ -23,15 +23,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       {/* Logo Section */}
-      <div className={styles.logo}>Mitch Park - blah148</div>
-
-      {/* Navigation Links */}
-      <nav className={styles.navLinks}>
-        <Link href="/">Home</Link>
-        <Link href="/music">Music</Link>
-        <Link href="/tour">Tour</Link>
-        <Link href="/contact">Contact</Link>
-      </nav>
+      <div className={styles.logo}>Park, Mitch [Blah148]</div>
 
       {/* Social Links */}
       <div className={styles.socialLinks}>

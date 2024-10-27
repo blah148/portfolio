@@ -1,13 +1,22 @@
 // components/Sidebar.js
+import Link from 'next/link';
 import styles from '../styles/Sidebar.module.css';
 
 export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
-      <p>SKIM, the bio</p>
-      <p>SAMPLE, the music</p>
-      <p>SEE, performance dates</p>
-      <p>SAY, 'hello'</p>
+      <Link href="#" passHref>
+        <p style={{ cursor: 'pointer', color: 'blue' }}>SKIM, the bio</p>
+      </Link>
+      <Link href="#" passHref>
+        <p style={{ cursor: 'pointer', color: 'blue' }}>SAMPLE, the music</p>
+      </Link>
+      <Link href="#" passHref>
+        <p style={{ cursor: 'pointer', color: 'blue' }}>SEE, performance dates</p>
+      </Link>
+      <Link href="/write" passHref>
+        <p style={{ cursor: 'pointer', color: 'blue' }}>WRITE, a 'hello'</p>
+      </Link>
     </div>
   );
 }

@@ -6,14 +6,16 @@ module.exports = {
     ],
   },
 
+
   async redirects() {
     return [
       {
-        source: '/projects',
-        destination: '/',
-        permanent: false, // Set to true for permanent redirection (HTTP status code 301)
+        source: '/contact',
+        destination: '/write',
+        permanent: true, // Use true for a 308 redirect, false for a 307
       },
     ];
   },
+
 };
 

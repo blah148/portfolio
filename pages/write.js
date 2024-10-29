@@ -26,17 +26,14 @@ export default function Contact() {
             <Loader isLoading={false} /> {/* Removed conditional loading */}
             <div className={styles.formBox}>
               <p>
-							  For inquiries or general correspondence, the mailing address below is an active inbox.  	
+							  For inquiries or general correspondence, this mailing address is an active inbox.  	
               </p>
               <div className={styles.contactDetails}>
-                <p>Mitchell Park</p>
-                <p>PO BOX 99900 SG 593 103</p>
+                <p>Blah148</p>
+                <p>4-4302 51 St.</p>
                 <p>St Paul, AB T0A 0E5</p>
                 <p>Canada</p>
               </div>
-              <p>
-								 Note: if other methods of a response are not specified, the 'from' address of the received mail may be used to express a reply.
-              </p>
             </div>
           </div>
           <Footer />

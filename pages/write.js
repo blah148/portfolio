@@ -26,7 +26,7 @@ export default function Contact() {
             <Loader isLoading={false} /> {/* Removed conditional loading */}
             <div className={styles.formBox}>
               <p>
-							  For inquiries or general correspondence, this mailing address is an active inbox.  	
+							  For inquiries or general correspondence, this mailing address is an active inbox.
               </p>
               <div className={styles.contactDetails}>
                 <p>Blah148</p>
@@ -34,6 +34,7 @@ export default function Contact() {
                 <p>St Paul, AB T0A 0E5</p>
                 <p>Canada</p>
               </div>
+							<p>An alternative is to send digital messages to: mpark148@gmail.com</p>
             </div>
           </div>
           <Footer />

@@ -25,7 +25,9 @@
 }
 
 /* Address details section */
-.contactDetails {
+.formBox form {
+	display: flex;
+	flex-direction: column;
   background-color: #fff;
   border-radius: 8px;
   padding: 1.5rem;

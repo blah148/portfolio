@@ -76,3 +76,23 @@
   font-size: 18px;
 }
 
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block; /* Show the menu icon on mobile and tablet */
+  }
+
+  .menu {
+    display: block; /* Ensure the menu is displayed on mobile and tablet */
+  }
+}
+
+@media (min-width: 769px) {
+  .menuIcon {
+    display: none; /* Hide the menu icon on desktop */
+  }
+
+  .menu {
+    display: none; /* Hide the menu on desktop */
+  }
+}
+

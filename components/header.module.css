@@ -1,11 +1,7 @@
 /* Header styles */
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px; /* Uniform margin */
   background-color: transparent; /* Set background to transparent */
-  position: relative;
   width: 100%;
 }
 

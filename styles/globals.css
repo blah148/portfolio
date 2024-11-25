@@ -9,8 +9,8 @@ body {
 }
 .otherBody {
 	width: 100%;
-	min-height: 80vh;
-	margin: 0 4rem;
+	min-height: 100vh;
+	margin: 0 12px;
 }
 .loaderComponent {
 	width: 100px;

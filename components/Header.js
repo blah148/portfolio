@@ -2,27 +2,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabaseClient'; // Assuming you're using Supabase for social links
+// import { supabase } from '../lib/supabaseClient'; // Assuming you're using Supabase for social links
 import styles from './header.module.css'; // Import the CSS module
+import Menu from './Menu.js';
 
 export default function Header({ logoTitle = "Park, Mitch [Blah148]" }) {
-  const [socialLinks, setSocialLinks] = useState([]);
+  // const [socialLinks, setSocialLinks] = useState([]);
 
   // Fetch social links from the Supabase table
-  useEffect(() => {
-    const fetchSocialLinks = async () => {
-      const { data, error } = await supabase
-        .from('social_links')
-        .select('name, icon_link, icon_alt_text, destination_url');
-      if (error) {
-        console.error("Error fetching social links:", error);
-      } else {
-        setSocialLinks(data);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchSocialLinks = async () => {
+  //     const { data, error } = await supabase
+  //       .from('social_links')
+  //       .select('name, icon_link, icon_alt_text, destination_url');
+  //     if (error) {
+  //       console.error("Error fetching social links:", error);
+  //     } else {
+  //       setSocialLinks(data);
+  //     }
+  //   };
 
-    fetchSocialLinks();
-  }, []);
+  //   fetchSocialLinks();
+  // }, []);
 
   return (
     <header className={styles.header}>
@@ -30,8 +31,10 @@ export default function Header({ logoTitle = "Park, Mitch [Blah148]" }) {
       <h1 className={styles.logo} title={logoTitle}>
         {logoTitle}
       </h1>
+			<Menu /> 
 
       {/* Social Links */}
+      {/* 
       <div className={styles.socialLinks}>
         {socialLinks.map((link) => (
           <a
@@ -48,7 +51,8 @@ export default function Header({ logoTitle = "Park, Mitch [Blah148]" }) {
             />
           </a>
         ))}
-      </div>
+      </div> 
+      */}
     </header>
   );
 }

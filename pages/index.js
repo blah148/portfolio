@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mitchell Park | Portfolio</title>
+        <title>Park, Mitch [Blah148]</title>
         <meta
           name="description"
           content="A display of the work produced by Mitchell Park, also known by the pseudonym of Blah148; a body of work touching upon the musical & non-musical, primarily based in Canada"

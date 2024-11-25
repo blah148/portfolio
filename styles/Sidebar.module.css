@@ -1,4 +1,12 @@
 /* styles/Sidebar.module.css */
+
+/* Hide Sidebar on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide sidebar on tablet and mobile */
+  }
+}
+
 .sidebar {
   width: 300px;
   padding: 20px;

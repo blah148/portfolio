@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import styles from './header.module.css'; // Import the CSS module
 import Menu from './Menu.js';
 
-export default function Header({ logoTitle = "Park, Mitch [Blah148]" }) {
+export default function Header({ logoTitle = "Park, Mitch" }) {
   // const [socialLinks, setSocialLinks] = useState([]);
 
   // Fetch social links from the Supabase table

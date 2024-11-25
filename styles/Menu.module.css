@@ -1,10 +1,10 @@
 /* Menu Icon */
 .menuIcon {
-  font-size: 24px;
+  font-size: 33px;
   cursor: pointer;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 8px;
+  right: 20px; /* Adjusted to top-right corner */
   z-index: 1001;
 }
 
@@ -31,16 +31,16 @@
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
   z-index: 1001;
-  transform: translateX(-100%);
+  transform: translateX(-100%); /* Starts off-screen to the left */
   transition: transform 0.3s ease-in-out;
 }
 
 .menu.slideIn {
-  transform: translateX(0);
+  transform: translateX(0); /* Slides in from the left */
 }
 
 .menu.slideOut {
-  transform: translateX(-100%);
+  transform: translateX(-100%); /* Slides back to the left */
 }
 
 /* Close Button */

@@ -6,8 +6,6 @@
 }
 
 .logo {
-  position: absolute;
-  left: 40px; /* Align the logo to the top left */
   font-size: 24px;
   font-weight: bold;
 }

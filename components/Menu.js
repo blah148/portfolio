@@ -37,9 +37,6 @@ const Menu = () => {
           isMenuOpen ? styles.slideIn : styles.slideOut
         }`}
       >
-        <button className={styles.closeButton} onClick={handleMenuToggle}>
-          ✖
-        </button>
     <div className={styles.sidebar}>
       <Link href="#" passHref>
         <p style={{ cursor: 'pointer', color: 'blue' }}>SKIM, the bio</p>

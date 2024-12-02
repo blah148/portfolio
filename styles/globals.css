@@ -22,7 +22,9 @@ body.menuOpen {
 }
 .otherBody {
 	width: 100%;
+	overflow-y: auto;
 	min-height: 100vh;
+	max-height: 100vh;
 	margin: 0 12px;
 }
 .loaderComponent {

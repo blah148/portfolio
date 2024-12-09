@@ -40,10 +40,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Park, Mitch [Blah148]</title>
+        <title>blah148 - Home</title>
         <meta
           name="description"
-          content="A display of the work produced by Mitchell Park, also known by the pseudonym of Blah148; a body of work touching upon the musical & non-musical, primarily based in Canada"
+          content="Website attempting to summarize musical projects of blah148, touching also on commentary"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
@@ -52,7 +52,7 @@ export default function Home() {
       <div className="mainBody">
 				<Sidebar />
 				<div className="otherBody">
-					<Header />
+					<Header logoTitle="blah148" />
 					<Footer />
 				</div>
 

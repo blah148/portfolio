@@ -47,17 +47,20 @@ const Menu = () => {
         }`}
       >
         <div className={styles.content}>
+					<Link href="/" passHref>
+						<p style={{ cursor: 'pointer', color: 'blue', marginBottom: '20px' }}>Home</p>
+					</Link>
           <Link href="/bio" passHref>
-            <p style={{ cursor: 'pointer', color: 'blue' }}>SKIM, the bio</p>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>Words</p>
           </Link>
           <Link href="/music" passHref>
-            <p style={{ cursor: 'pointer', color: 'blue' }}>SAMPLE, the music</p>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>music</p>
           </Link>
           <Link href="/dates" passHref>
-            <p style={{ cursor: 'pointer', color: 'blue' }}>SEE, performance dates</p>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>Dates</p>
           </Link>
           <Link href="/write" passHref>
-            <p style={{ cursor: 'pointer', color: 'blue' }}>WRITE, a 'hello'</p>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>Contact</p>
           </Link>
         </div>
       </div>

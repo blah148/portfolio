@@ -64,10 +64,10 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact | Mitchell Park - Portfolio</title>
+        <title>blah148 - Contact</title>
         <meta
           name="description"
-          content="Get in touch with Mitchell Park through this form for inquiries or project discussions."
+          content="An online contact form to send messages to blah148"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
@@ -76,7 +76,7 @@ export default function Contact() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="WRITE, a 'hello'"/>
+          <Header logoTitle="Contact"/>
           <div className={styles['contact-form']}>
             <Loader isLoading={isLoading} />
             <div className={styles.formBox}>

@@ -30,10 +30,10 @@ export default function Tour() {
   return (
     <>
       <Head>
-        <title>Mitchell Park | Tours</title>
+        <title>blah148 - Dates</title>
         <meta
           name="description"
-          content="Explore past tours and performances of Mitchell Park."
+          content="A list of dates, past & future, when blah148 is playing music."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -42,7 +42,7 @@ export default function Tour() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="SEE, performance dates" />
+          <Header logoTitle="Dates" />
           <div className={styles['tour-content']}>
             {tourData.length === 0 ? (
               <p>No past performance dates</p>

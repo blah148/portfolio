@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <p>© 2024 Mitch Park - Blah148. All Rights Reserved.</p>
+        <p>© 2024 Blah148</p>
         <div className={styles.footerLinks}>
         </div>
       </div>

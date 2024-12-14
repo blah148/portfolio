@@ -59,6 +59,9 @@ const Menu = () => {
           <Link href="/dates" passHref>
             <p style={{ cursor: 'pointer', color: 'blue' }}>Dates</p>
           </Link>
+					<Link href="/gallery" passHref>
+						<p style={{ cursor: 'pointer', color: 'blue' }}>gallery</p>
+					</Link>
           <Link href="/write" passHref>
             <p style={{ cursor: 'pointer', color: 'blue' }}>Contact</p>
           </Link>

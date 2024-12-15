@@ -28,7 +28,7 @@ body.menuOpen {
 	overflow-y: auto;
 	min-height: 100vh;
 	max-height: 100vh;
-	margin: 0 12px;
+	margin: 0 1.5rem;
 }
 .loaderComponent {
 	width: 100px;

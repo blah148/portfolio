@@ -33,8 +33,8 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Home | Blah148</title>
-        <meta name="description" content="Welcome to the homepage of Blah148 featuring news posts." />
+        <title>blah148 - Home</title>
+        <meta name="description" content="A portfolio site for blah148, showing music & other updates" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>

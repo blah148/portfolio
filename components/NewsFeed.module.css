@@ -2,7 +2,21 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 1rem;
+  padding: 1rem 0;
+}
+
+/* A wrapper around each post to show the date outside the card */
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Style the date if needed */
+.postDate {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
 .postContainer {
@@ -12,6 +26,7 @@
   padding: 1.5rem;
   border-radius: 5px;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
+	max-width: 860px;
 }
 
 .postTitle {
@@ -36,5 +51,12 @@
 .postImage {
   border-radius: 5px;
   object-fit: cover;
+}
+
+/* Add styling for the videoWrapper if needed */
+.videoWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
 }
 

@@ -7,7 +7,7 @@
 }
 
 .formBox {
-  width: 100%;
+  max-width: 950px;
 }
 
 /* Title and description styles */
@@ -17,11 +17,24 @@
   margin-bottom: 1rem;
 }
 
+.labelTag {
+	margin: 7px 0 2.5px 0;
+}
+
+.formButton {
+	margin: 10px 0;
+}
+
 .description {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 1.5rem;
   line-height: 1.5;
+}
+
+.messageBox {
+  height: 10ch;
+  width: 100%;
 }
 
 /* Address details section */

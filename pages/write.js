@@ -81,7 +81,7 @@ export default function Contact() {
             <Loader isLoading={isLoading} />
             <div className={styles.formBox}>
               <form onSubmit={handleSubmit}>
-                <label htmlFor="fname">
+                <label htmlFor="fname" className={styles.labelTag}>
                   Name <span className={styles['required']}>*</span> :
                 </label>
                 <input
@@ -92,7 +92,7 @@ export default function Contact() {
                   value={fname}
                   onChange={handleChange}
                 />
-                <label htmlFor="email">
+                <label className={styles.labelTag} htmlFor="email">
                   Email <span className={styles['required']}>*</span> :
                 </label>
                 <input
@@ -104,7 +104,7 @@ export default function Contact() {
                   required
                   onChange={handleChange}
                 />
-                <label htmlFor="subject">
+                <label htmlFor="subject" className={styles.labelTag}>
                   Subject <span className={styles['required']}>*</span> :
                 </label>
                 <input
@@ -116,18 +116,18 @@ export default function Contact() {
                   required
                   onChange={handleChange}
                 />
-                <label htmlFor="message">
+                <label htmlFor="message" className={styles.labelTag}>
                   Message <span className={styles['required']}>*</span> :
                 </label>
                 <textarea
-                  className={styles['formRow']}
+                  className={`${styles.formRow} ${styles.messageBox}`}
                   id="message"
                   name="message"
                   required
                   value={message}
                   onChange={handleChange}
                 ></textarea>
-                <button type="submit">
+                <button className={styles.formButton} type="submit">
                   Send Message
                 </button>
               </form>

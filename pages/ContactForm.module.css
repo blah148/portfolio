@@ -43,7 +43,7 @@
 	flex-direction: column;
   background-color: #fff;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.2rem;
   margin: 12px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -61,11 +61,10 @@
 /* Additional responsive styling */
 @media (max-width: 768px) {
   .contact-content {
-    padding: 1rem;
+    padding: 1rem 0;
   }
   
   .formBox {
-    padding: 1.5rem;
   }
 
   .title {

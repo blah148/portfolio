@@ -34,7 +34,7 @@ export default function HomePage() {
     <>
       <Head>
         <title>blah148 - Home</title>
-        <meta name="description" content="A portfolio site for blah148, showing music & other updates" />
+        <meta name="description" content="Website attempting to summarize musical projects of blah148, touching also on commentary." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>

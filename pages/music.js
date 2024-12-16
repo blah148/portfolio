@@ -1,10 +1,36 @@
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { supabase } from '../lib/supabaseClient';
+import Loader from '../components/Loader';
+import MusicFeed from '../components/MusicFeed';
 import styles from '../styles/Music.module.css';
 
 export default function Music() {
+  const [tracks, setTracks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchMusic = async () => {
+      const { data, error } = await supabase
+        .from('music')
+        .select('*')
+        .order('date', { ascending: false }); // Sort by date descending
+
+      if (error) {
+        console.error('Error fetching music data:', error);
+        setIsLoading(false);
+      } else {
+        setTracks(data || []);
+        setIsLoading(false);
+      }
+    };
+
+    fetchMusic();
+  }, []);
+
   return (
     <>
       <Head>
@@ -21,22 +47,8 @@ export default function Music() {
         <Sidebar />
         <div className="otherBody">
           <Header logoTitle="music" />
-
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/OkHjpWFCMpY?si=aUoPS2PpsnGaLL5r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-					<div style={{ marginBottom: '20px' }}></div>
-
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/4jHJZXOAer8?si=tJ6lvk-ZpiwFbtOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-					<div style={{ marginBottom: '20px' }}></div>
-
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/CSyDoXkCuMA?si=GbbCkd-I2jxXxplY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-					<div style={{ marginBottom: '20px' }}></div>
-
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/n07ZOduqaBM?si=YiuEs-khQ_3PEvqH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
+          <Loader isLoading={isLoading} />
+          {!isLoading && <MusicFeed tracks={tracks} />}
           <Footer />
         </div>
       </div>

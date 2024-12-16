@@ -15,6 +15,9 @@ export default function Sidebar() {
 				<Link href="/music" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>music</p>
 				</Link>
+				<Link href="/streams" passHref>
+					<p style={{ cursor: 'pointer', color: 'blue' }}>streams</p>
+				</Link>
 				<Link href="/dates" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>Dates</p>
 				</Link>

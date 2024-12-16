@@ -5,29 +5,29 @@ import Loader from '../components/Loader';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
-import NewsFeed from '../components/NewsFeed';
+import Content from '../components/Content';
 
 export default function HomePage() {
-  const [posts, setPosts] = useState([]);
+  const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchContent = async () => {
       const { data, error } = await supabase
-        .from('news_feed')
+        .from('content')
         .select('*')
         .order('date', { ascending: false }); // Sort by date descending
 
       if (error) {
-        console.error('Error fetching posts:', error);
+        console.error('Error fetching content:', error);
         setIsLoading(false);
       } else {
-        setPosts(data || []);
+        setItems(data || []);
         setIsLoading(false);
       }
     };
 
-    fetchPosts();
+    fetchContent();
   }, []);
 
   return (
@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="otherBody">
           <Header logoTitle="Home" />
           <Loader isLoading={isLoading} />
-          {!isLoading && <NewsFeed posts={posts} />}
+          {!isLoading && <Content contentItems={items} />}
           <Footer />
         </div>
       </div>

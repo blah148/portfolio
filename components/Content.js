@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Content.module.css';
 
 export default function ContentFeed({ contentItems, filterTagId = null }) {
@@ -50,6 +51,16 @@ export default function ContentFeed({ contentItems, filterTagId = null }) {
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   ></iframe>
+                </div>
+              )}
+              {filterTagId === null && item.tags?.name && item.tags?.hyperlink && (
+                <div className={styles.categoryContainer}>
+                  <span className={styles.categoryLabel}>Category: </span>
+                  <p className={styles.postTagName}>
+                    <Link href={item.tags.hyperlink}>
+                      {item.tags.name}
+                    </Link>
+                  </p>
                 </div>
               )}
             </div>

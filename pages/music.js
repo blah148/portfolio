@@ -5,30 +5,29 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { supabase } from '../lib/supabaseClient';
 import Loader from '../components/Loader';
-import MusicFeed from '../components/MusicFeed';
-import styles from '../styles/Music.module.css';
+import Content from '../components/Content';
 
 export default function Music() {
-  const [tracks, setTracks] = useState([]);
+  const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchMusic = async () => {
+    const fetchContent = async () => {
       const { data, error } = await supabase
-        .from('music')
+        .from('content')
         .select('*')
         .order('date', { ascending: false }); // Sort by date descending
 
       if (error) {
-        console.error('Error fetching music data:', error);
+        console.error('Error fetching content:', error);
         setIsLoading(false);
       } else {
-        setTracks(data || []);
+        setItems(data || []);
         setIsLoading(false);
       }
     };
 
-    fetchMusic();
+    fetchContent();
   }, []);
 
   return (
@@ -48,7 +47,7 @@ export default function Music() {
         <div className="otherBody">
           <Header logoTitle="music" page_level={2} />
           <Loader isLoading={isLoading} />
-          {!isLoading && <MusicFeed tracks={tracks} />}
+          {!isLoading && <Content contentItems={items} filterTagId={2} />}
           <Footer />
         </div>
       </div>

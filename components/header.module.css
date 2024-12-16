@@ -3,11 +3,13 @@
   display: flex;
   background-color: transparent; /* Set background to transparent */
   width: 100%;
+	padding: 4px;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
+	padding: 4px 0 0 11px;
 }
 
 .navLinks {

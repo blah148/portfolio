@@ -76,7 +76,7 @@ export default function Contact() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="Contact"/>
+          <Header logoTitle="Contact" page_level={2} />
           <div className={styles['contact-form']}>
             <Loader isLoading={isLoading} />
             <div className={styles.formBox}>

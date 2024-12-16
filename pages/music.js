@@ -46,7 +46,7 @@ export default function Music() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="music" />
+          <Header logoTitle="music" page_level={2} />
           <Loader isLoading={isLoading} />
           {!isLoading && <MusicFeed tracks={tracks} />}
           <Footer />

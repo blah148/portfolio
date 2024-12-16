@@ -9,7 +9,7 @@ export default function Sidebar() {
 				<Link href="/" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue', marginBottom: '30px' }}>Home</p>
 				</Link>
-				<Link href="/bio" passHref>
+				<Link href="/words" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>Words</p>
 				</Link>
 				<Link href="/music" passHref>

@@ -10,6 +10,11 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: '/bio',
+        destination: '/words',
+        permanent: true,
+      },
+      {
         source: '/contact',
         destination: '/write',
         permanent: true, // Use true for a 308 redirect, false for a 307

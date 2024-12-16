@@ -42,7 +42,7 @@ export default function Tour() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="Dates" />
+          <Header logoTitle="Dates" page_level={2} />
           <div className={styles['tour-content']}>
             {tourData.length === 0 ? (
               <p>No past performance dates</p>

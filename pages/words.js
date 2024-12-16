@@ -8,10 +8,10 @@ export default function Bio() {
   return (
     <>
       <Head>
-        <title>blah148 - bio</title>
+        <title>blah148 - Words</title>
         <meta
           name="description"
-          content="Words about early years and speaking of musicians"
+          content="A summary of upbringing as well as music listened-to"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
@@ -20,7 +20,7 @@ export default function Bio() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="Words" />
+          <Header logoTitle="Words" page_level={2} />
           <div className={styles['bio-content']}>
             <p>
               Blah was born in the economic boom years of the 1990s in Alberta, Canada. 

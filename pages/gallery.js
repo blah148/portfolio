@@ -54,7 +54,7 @@ export default function Photos() {
       <div className="mainBody">
         <Sidebar />
         <div className="otherBody">
-          <Header logoTitle="Gallery" />
+          <Header logoTitle="Gallery" page_level={2} />
           <Loader isLoading={isLoading} />
           <div className={styles.masonryGrid}>
             {photos.map((photo, index) => (

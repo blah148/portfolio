@@ -1,8 +1,11 @@
+// components/Content.js
+
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Content.module.css';
 
-export default function ContentFeed({ contentItems, filterTagId = null }) {
+export default function ContentFeed({ contentItems, filterTagId = null, setIsLoadingMore }) {
   // Filter active items first
   let filteredItems = contentItems.filter((item) => item.active === true);
 
@@ -16,9 +19,55 @@ export default function ContentFeed({ contentItems, filterTagId = null }) {
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
 
+  // State to manage the number of visible posts
+  const [visibleCount, setVisibleCount] = useState(3);
+  // Reference for the sentinel element (used with Intersection Observer)
+  const sentinelRef = useRef(null);
+
+  const loadMore = () => {
+    if (visibleCount >= filteredItems.length) return; // No more posts to load
+    if (setIsLoadingMore) setIsLoadingMore(true); // Indicate loading start
+
+    // Simulate a network request delay
+    setTimeout(() => {
+      setVisibleCount((prev) => Math.min(prev + 3, filteredItems.length));
+      if (setIsLoadingMore) setIsLoadingMore(false); // Indicate loading end
+    }, 1000); // 1-second delay; adjust as needed
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMore();
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1.0,
+      }
+    );
+
+    if (sentinelRef.current) {
+      observer.observe(sentinelRef.current);
+    }
+
+    return () => {
+      if (sentinelRef.current) {
+        observer.unobserve(sentinelRef.current);
+      }
+    };
+  }, [filteredItems.length, visibleCount]);
+
+  // Reset visibleCount if filteredItems changes (e.g., due to filterTagId)
+  useEffect(() => {
+    setVisibleCount(3);
+  }, [filterTagId, contentItems]);
+
   return (
     <div className={styles.newsFeedContainer}>
-      {filteredItems.map((item) => {
+      {filteredItems.slice(0, visibleCount).map((item) => {
         const [year, month, day] = item.date.split('-');
         const formattedDate = `${monthNames[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
 
@@ -67,6 +116,10 @@ export default function ContentFeed({ contentItems, filterTagId = null }) {
           </div>
         );
       })}
+
+      {/* Sentinel Element for Intersection Observer */}
+      <div ref={sentinelRef}></div>
+
     </div>
   );
 }

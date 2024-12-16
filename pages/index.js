@@ -1,3 +1,5 @@
+// pages/index.js or pages/HomePage.js
+
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { supabase } from '../lib/supabaseClient';
@@ -9,7 +11,8 @@ import Content from '../components/Content';
 
 export default function HomePage() {
   const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); // Initial loading state
+  const [isLoadingMore, setIsLoadingMore] = useState(false); // Loading more posts state
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -46,8 +49,18 @@ export default function HomePage() {
         <Sidebar />
         <div className="otherBody">
           <Header logoTitle="Home" />
-          <Loader isLoading={isLoading} />
-          {!isLoading && <Content contentItems={items} />}
+          
+          {/* Loader: Show during initial load or when loading more posts */}
+          {(isLoading || isLoadingMore) && <Loader isLoading={true} />}
+
+          {/* Render ContentFeed when not initial loading */}
+          {!isLoading && (
+            <Content 
+              contentItems={items} 
+              setIsLoadingMore={setIsLoadingMore} 
+            />
+          )}
+
           <Footer />
         </div>
       </div>

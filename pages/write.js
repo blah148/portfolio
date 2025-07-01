@@ -80,6 +80,12 @@ export default function Contact() {
           <div className={styles['contact-form']}>
             <Loader isLoading={isLoading} />
             <div className={styles.formBox}>
+  <p>
+    An online contact form to send messages. Alternatively, an email can directly be sent to{' '}
+    <a href="mailto:mpark148@gmail.com" className="text-blue-500 underline">
+      mpark148@gmail.com
+    </a>.
+  </p>
               <form onSubmit={handleSubmit}>
                 <label htmlFor="fname" className={styles.labelTag}>
                   Name <span className={styles['required']}>*</span> :

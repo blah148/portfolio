@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 import styles from './LandingPage.module.css';
 import { FaSpotify, FaApple, FaYoutube, FaBandcamp, FaPlay } from 'react-icons/fa';
+import GTM from '../../components/GTM.js';
 
 export default function LandingPage({ lp }) {
   const [showVideo, setShowVideo] = useState(false);
@@ -31,7 +32,11 @@ export default function LandingPage({ lp }) {
         <link rel="canonical" href={canonical} />
         {/* Optional: tint mobile browser UI for this page only */}
         <meta name="theme-color" content="#0b0f14" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="googlebot" content="noindex,nofollow" />
       </Head>
+
+			<GTM />
 
       {/* Dark mode is scoped to this wrapper only */}
       <main className={styles.page}>
@@ -100,7 +105,7 @@ export default function LandingPage({ lp }) {
           {(lp.youtube_url || lp.spotify_url || lp.apple_music_url || lp.bandcamp_url) && (
             <section className={styles.altPlatforms}>
               <p className={styles.altLead}>
-                Not on Youtube? Catch it instantly on these platforms:
+                Not Youtube? Catch it instantly on these platforms:
               </p>
               <ul className={styles.platforms}>
                 {lp.spotify_url && (

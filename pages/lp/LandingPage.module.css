@@ -1,0 +1,215 @@
+/* pages/lp/LandingPage.module.css */
+/* All dark-mode styling is scoped within .page */
+
+.page {
+  min-height: 100svh;
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(37, 51, 75, 0.25), transparent 60%),
+    radial-gradient(60% 40% at 100% 0%, rgba(16, 24, 36, 0.35), transparent 60%),
+    #0b0f14; /* deep ink/navy */
+  color: #e6e9ee; /* default text inside */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px 64px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0 0 10px 0;
+  font-size: 2.35rem;
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+  color: #f1f4f9;
+  text-shadow: 0 2px 18px rgba(135, 170, 255, 0.15);
+}
+
+.subheadline {
+  color: #a9b4c3;
+  margin: 0 0 18px 0;
+}
+
+.media {
+  margin: 20px 0 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #151c27, #0f141c);
+  color: #eaf0f7;
+  border: 1px solid rgba(128, 152, 190, 0.18);
+  cursor: pointer;
+  font-weight: 650;
+  box-shadow: 0 8px 24px rgba(18, 24, 33, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.playButton:hover,
+.playButton:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(18, 24, 33, 0.5), 0 0 0 4px rgba(120, 164, 255, 0.15);
+  border-color: rgba(128, 152, 190, 0.3);
+  outline: none;
+}
+
+.playBadge {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #b21a1a 65%);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.04), 0 6px 18px rgba(178, 26, 26, 0.35);
+}
+
+.playIcon {
+  width: 14px;
+  height: 14px;
+  color: #fff;
+}
+
+.playLabel {
+  opacity: 0.95;
+}
+
+.video {
+  width: 100%;
+  border-radius: 14px;
+  outline: none;
+  border: 1px solid rgba(128, 152, 190, 0.18);
+  background: #0f141c;
+  box-shadow: 0 14px 38px rgba(10, 15, 22, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.body {
+  white-space: pre-wrap;
+  margin: 18px 0;
+  color: #d6dbe4;
+}
+
+.bodyQuote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ddd;
+  border-left: 4px solid #3a506b; /* accent */
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  quotes: "“" "”" "‘" "’";
+}
+.bodyQuote::before {
+  content: open-quote;
+}
+.bodyQuote::after {
+  content: close-quote;
+}
+
+
+.ctaRow {
+  margin: 20px 0 6px 0;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 750;
+  border: 1px solid transparent;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.ctaYoutube {
+  background: linear-gradient(180deg, #ff3b3b, #c01111);
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(192, 17, 17, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55), 0 0 0 4px rgba(255, 59, 59, 0.15);
+  outline: none;
+}
+
+.ctaButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ctaIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.altPlatforms {
+  margin-top: 26px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(128, 152, 190, 0.18);
+}
+
+.altLead {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 550;
+  color: #c2c9d4;
+}
+
+.platforms {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px 14px;
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #111823, #0c111a);
+  border: 1px solid rgba(128, 152, 190, 0.16);
+  color: #e8edf6;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  box-shadow: 0 8px 24px rgba(10, 15, 22, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.iconLink:hover,
+.iconLink:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(10, 15, 22, 0.55), 0 0 0 4px rgba(120, 164, 255, 0.12);
+  border-color: rgba(128, 152, 190, 0.28);
+  outline: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+}
+
+/* Branded accents for dark mode */
+.youtube { color: #ff4a4a; }   /* YouTube */
+.spotify { color: #1ed760; }   /* Spotify */
+.apple   { color: #f5f5f7; }   /* Apple Music (light on dark) */
+.bandcamp{ color: #7bb8c6; }   /* Bandcamp teal */
+

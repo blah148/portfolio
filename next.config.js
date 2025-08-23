@@ -1,3 +1,5 @@
+// next.config.js
+
 module.exports = {
   images: {
     remotePatterns: [
@@ -5,7 +7,6 @@ module.exports = {
       { hostname: 'media.licdn.com' }
     ],
   },
-
 
   async redirects() {
     return [
@@ -17,10 +18,9 @@ module.exports = {
       {
         source: '/contact',
         destination: '/write',
-        permanent: true, // Use true for a 308 redirect, false for a 307
+        permanent: true,
       },
     ];
   },
-
 };
 

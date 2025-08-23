@@ -1,8 +1,11 @@
+// components/Menu.js
+'use client';
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Menu.module.css';
 
-const Menu = () => {
+export default function Menu() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -16,9 +19,9 @@ const Menu = () => {
   // Add or remove a class to the body element dynamically
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('menuOpen'); // Add class when menu is open
+      document.body.classList.add('menuOpen');
     } else {
-      document.body.classList.remove('menuOpen'); // Remove class when menu is closed
+      document.body.classList.remove('menuOpen');
     }
   }, [isMenuOpen]);
 
@@ -38,7 +41,7 @@ const Menu = () => {
           pointerEvents: isMenuOpen ? 'auto' : 'none',
         }}
         onClick={handleOverlayClick}
-      ></div>
+      />
 
       {/* Sliding Menu */}
       <div
@@ -47,24 +50,24 @@ const Menu = () => {
         }`}
       >
         <div className={styles.content}>
-					<Link href="/" passHref>
-						<p style={{ cursor: 'pointer', color: 'blue', marginBottom: '20px' }}>Home</p>
-					</Link>
+          <Link href="/" passHref>
+            <p style={{ cursor: 'pointer', color: 'blue', marginBottom: '20px' }}>Home</p>
+          </Link>
           <Link href="/words" passHref>
             <p style={{ cursor: 'pointer', color: 'blue' }}>Words</p>
           </Link>
           <Link href="/music" passHref>
-            <p style={{ cursor: 'pointer', color: 'blue' }}>music</p>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>Music</p>
           </Link>
-					<Link href="/streams" passHref>
-						<p style={{ cursor: 'pointer', color: 'blue' }}>streams</p>
-					</Link>
+          <Link href="/streams" passHref>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>Streams</p>
+          </Link>
           <Link href="/dates" passHref>
             <p style={{ cursor: 'pointer', color: 'blue' }}>Dates</p>
           </Link>
-					<Link href="/gallery" passHref>
-						<p style={{ cursor: 'pointer', color: 'blue' }}>gallery</p>
-					</Link>
+          <Link href="/gallery" passHref>
+            <p style={{ cursor: 'pointer', color: 'blue' }}>Gallery</p>
+          </Link>
           <Link href="/write" passHref>
             <p style={{ cursor: 'pointer', color: 'blue' }}>Contact</p>
           </Link>
@@ -72,7 +75,5 @@ const Menu = () => {
       </div>
     </div>
   );
-};
-
-export default Menu;
+}
 

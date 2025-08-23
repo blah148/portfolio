@@ -1,24 +1,8 @@
-import React from 'react';
-import styles from './Loader.module.css';
+// app/loading.js
+import Loader from '../components/Loader';
 
-function Loader({ isLoading }) {
-  return (
-		<div className={styles.positionSticky}>
-    <div className={styles.loaderContainer}>
-      {isLoading && (
-        <div className={styles.ldsEllipsis}>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      )}
-    </div>
-	</div>
-  );
-	
+export default function Loading() {
+  // Always show loader while server is waiting
+  return <Loader isLoading={true} />;
 }
-
-export default Loader;
-
 

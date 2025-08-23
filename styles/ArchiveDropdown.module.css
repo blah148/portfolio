@@ -1,0 +1,46 @@
+.archiveTree {
+  margin: 1rem 0;
+}
+
+.heading {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.yearList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.yearItem {
+  margin-bottom: 0.5rem;
+}
+
+.yearButton {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+}
+
+.monthList {
+  list-style: none;
+  margin: 0.25rem 0 0 1rem;
+  padding: 0;
+}
+
+.monthList li {
+  margin: 0.2rem 0;
+}
+
+.monthList li a {
+  text-decoration: none;
+  color: blue;
+}
+.monthList li a:hover {
+  text-decoration: underline;
+}
+

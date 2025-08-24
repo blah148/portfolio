@@ -1,4 +1,3 @@
-// components/Content.js
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Content.module.css';
@@ -55,15 +54,18 @@ export default function ContentFeed({ contentItems, filterTagId = null }) {
                   ></iframe>
                 </div>
               )}
+{filterTagId === null && item.tags?.name && item.tags?.hyperlink && (
+  <div className={styles.categoryContainer}>
+    <span className={styles.categoryLabel}>Category: </span>
+    <p className={styles.postTagName}>
+<Link href={`/tag/${item.tags.slug}`}>
+  {item.tags.name}
+</Link>
 
-              {filterTagId === null && item.tags?.name && item.tags?.hyperlink && (
-                <div className={styles.categoryContainer}>
-                  <span className={styles.categoryLabel}>Category: </span>
-                  <p className={styles.postTagName}>
-                    <Link href={item.tags.hyperlink}>{item.tags.name}</Link>
-                  </p>
-                </div>
-              )}
+    </p>
+  </div>
+)}
+
             </div>
           </div>
         );

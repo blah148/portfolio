@@ -12,14 +12,11 @@ export default function Sidebar() {
 				<Link href="/words" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>Words</p>
 				</Link>
-				<Link href="/music" passHref>
+				<Link href="/tag/music" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>music</p>
 				</Link>
-				<Link href="/streams" passHref>
+				<Link href="/tag/livestream" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>streams</p>
-				</Link>
-				<Link href="/dates" passHref>
-					<p style={{ cursor: 'pointer', color: 'blue' }}>Dates</p>
 				</Link>
 				<Link href="/gallery" passHref>
 					<p style={{ cursor: 'pointer', color: 'blue' }}>gallery</p>

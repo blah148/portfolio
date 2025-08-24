@@ -1,5 +1,5 @@
 // app/loading.js
-import styles from '../components/Loader.module.css';
+import styles from '../styles/Loader.module.css';
 
 export default function Loading() {
   return (

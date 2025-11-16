@@ -42,7 +42,7 @@ export default function AudioPlayer({ src, title, subtitle }) {
     <div className={styles.playerContainer}>
       {title && (
         <div className={styles.songTitle}>
-          <h3>{title}</h3>
+          <h3><i>{title}</i></h3>
 					<span>Recording date: {subtitle}</span>
         </div>
       )}

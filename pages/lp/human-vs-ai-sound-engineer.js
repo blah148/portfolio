@@ -210,11 +210,8 @@ That was honestly how I was able to release my first album. Moments after the tr
 
 <h2>12 audio examples of the A.I. mixes</h2>
 <p>
-  The playback from the live tracks, embedded below, comes from this exact
+  The playback from the published album, embedded below, comes from this exact
   process.
-</p>
-
-<p>
   To compare with the human-made mixes, the comparable tracks are,
 </p>
 
@@ -295,27 +292,29 @@ Are there caveats to those numbers? Without any doubt. If I had known, and stuck
 
 <p>In summary, from what I can tell, the A.I. / machine learning tool was used here in the same manner that it might be used to recognize a face in a photo, or trace the outline of a person in a picture; it just traced out the waveform pretty darn well and (if that's the case) then was able to apply the necessary loudness to it. That's in essence all it did that was more efficient than a person, and it just so happens that for this project nothing else was really needed.</p>
 
-          <h2 id="appendixA">Appendix A: the current recording rig,</h2>
+          <h2 id="appendixA">Appendix A: an improved recording rig (no more cell phone)</h2>
 
 <p>
-  At this time, the recording rig that I'm using is looking better; though, a high bar wasn't really set, given that the debut album arose from a cell phone voice memos app. It consists now of:<br /><br />
-  (i) A vintage 6-string and 12-string guitar, into,<br />
+  Not that a high bar was necessarily set, now the recording rig is looking better. In sequence, it consists of,<br /><br />
+  (i) A vintage 6-string and 12-string guitar, and voice, into,<br />
   (ii) Multiple Shure mics, into,<br />
   (iii) A tube preamp, to boost loudness and attain some tube tone, into,<br />
   (iv) An analog Tascam tape recorder, for some analog saturation, into,<br />
-  (v) a DAW, into,<br />
-  (vi) Audacity, to create the digital waveform, into,<br />
-  (vii) the same AI tool, essentially just used as a loudness tool.
+  (v) a Behringer audio interface, as an analog to digital converter, into,<br />
+  (vi) Audacity (on the computer), to see the digital waveform, into,<br />
+  (vii) the same AI tool, essentially just as a loudness tool like before.
 </p>
 
-          <h2 id="appendixB">Appendix B: an invitation to connect,</h2>
+          <h2 id="appendixB">Appendix B: the next project</h2>
 
           <p>
-As exemplified by the recording of 'Take My Hand, Precious Lord', I am hoping to compile a set of recordings, which can then be presented to a label for a more official release. In case you might know of a label who may be interested, please feel free to reach out!
+
+For a second album, I'm planning to put together a handful of traditional spiritual tracks (using the setup described above), and this is one example demo below.
           </p>
     <AudioPlayer
       src="https://bmvuqgfxczoytjwjpvcn.supabase.co/storage/v1/object/public/misc/2025.11.09_precious-lord_pannedLeftRight.mp3"
       title="Take My Hand, Precious Lord"
+			subtitle="November 9th, 2025"
     />
           <h2 id="appendixC">Appendix C: about me,</h2>
 

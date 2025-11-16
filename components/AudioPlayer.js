@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 import styles from "./AudioPlayer.module.css";
 
-export default function AudioPlayer({ src, title }) {
+export default function AudioPlayer({ src, title, subtitle }) {
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -42,12 +42,13 @@ export default function AudioPlayer({ src, title }) {
     <div className={styles.playerContainer}>
       {title && (
         <div className={styles.songTitle}>
-          <strong>{title}</strong>
+          <h3>{title}</h3>
+					<span>Recording date: {subtitle}</span>
         </div>
       )}
 
       <button onClick={togglePlay} className={styles.playButton}>
-        {isPlaying ? "Pause" : "Listen/play"}
+        {isPlaying ? "Pause" : "Play"}
       </button>
 
       <div ref={waveformRef} className={styles.waveform} />

@@ -1,12 +1,13 @@
 body {
-	margin: 0;
-	background-color: #f6f9f9;
+	margin: 0 !important;
+	background-color: black;
 }
 
 html,
 body {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
+	background-color: yellow !important;
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
 

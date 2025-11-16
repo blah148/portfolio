@@ -6,7 +6,7 @@ export default function SpotifyEmbed({ src }) {
       <iframe
         src={src}
         width="100%"
-        height="352"
+        height="700"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"

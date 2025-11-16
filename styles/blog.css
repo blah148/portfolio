@@ -18,9 +18,33 @@ body {
 /*                HEADINGS ONLY HERE            */
 /* -------------------------------------------- */
 
+/* Both share the same base styling */
 .hero-image {
-	max-width: 760px;
-	height: auto;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Default: mobile version visible, desktop hidden */
+.hero-mobile {
+  display: block;
+}
+
+.hero-desktop {
+  display: none;
+}
+
+/* Desktop/tablet breakpoint */
+@media (min-width: 768px) {
+  .hero-mobile {
+    display: none;
+  }
+
+  .hero-desktop {
+    display: block;
+  }
 }
 
 .blog-wrapper h1 {
@@ -182,6 +206,16 @@ body {
 @media (prefers-color-scheme: dark) {
   .blog-page-background {
     background-color: #111111;
+  }
+}
+.mobile-left-desktop-center {
+  text-align: left;
+}
+
+/* Center on tablet/desktop */
+@media (min-width: 768px) {
+  .mobile-left-desktop-center {
+    text-align: center;
   }
 }
 

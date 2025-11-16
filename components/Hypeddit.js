@@ -25,13 +25,6 @@ const SONG_TITLE = "The Bell It Shines Like Gold";
 export default function Hypeddit() {
   const rows = [
     {
-      key: "youtube",
-      label: "Listen on YouTube",
-      href: YOUTUBE_LINK,
-      Icon: FaYoutube,
-      iconClass: styles.youtube,
-    },
-    {
       key: "spotify",
       label: "Listen on Spotify",
       href: SPOTIFY_LINK,
@@ -44,6 +37,13 @@ export default function Hypeddit() {
       href: APPLE_LINK,
       Icon: FaApple,
       iconClass: styles.apple,
+    },
+    {
+      key: "youtube",
+      label: "Listen on YouTube",
+      href: YOUTUBE_LINK,
+      Icon: FaYoutube,
+      iconClass: styles.youtube,
     },
   ];
 

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <p>© 2025 Blah148</p>
+        <p>© blah148</p>
         <div className={styles.footerLinks}>
         </div>
       </div>

@@ -1,10 +1,13 @@
 import SEO from "../../components/SEO";
+import Footer from "../../components/Footer";
+import Hypeddit from '../../components/Hypeddit.js';
 import Head from "next/head";
 import Image from "next/image";
 import SpotifyEmbed from "../../components/SpotifyEmbed";
 import YouTubeSubscribe from "../../components/YoutubeSubscribe.jsx";
 import AudioPlayer from "../../components/AudioPlayer";
 import GTM from "../../components/GTM.js";
+import ArtistWidget from "../../components/ArtistWidget.js";
 import "../../styles/blog.css";
 
 export const metadata = {
@@ -36,31 +39,11 @@ export default function Page() {
 			className="hero-image"
     />
           <h1>
-            I spent $5,358 on a human mix & $200 on an A.I. mix for the same tracks - here's what I learned.
+            I spent $5,358 on a human mix & $200 on an A.I. mix for the same tracks - these are the results.
           </h1>
 					<YouTubeSubscribe />
 					<p className="published-date">Published date: 15 November 2025</p>
           <hr />
-          {/* TABLE OF CONTENTS — placed underneath the title */}
-          <details className="toc-dropdown">
-            <summary>Table of Contents</summary>
-
-            <div className="toc-inner">
-              <a href="#intro">Introduction</a>
-              <a href="#caveat1">Caveat #1</a>
-              <a href="#caveat2">Caveat #2</a>
-              <a href="#review">Reviewing the Sound Engineer’s Work</a>
-              <a href="#pro1">Pro #1 – Equalization</a>
-              <a href="#pro2">Pro #2 – Stereo Image</a>
-              <a href="#con1">Con #1 – Noise Reduction</a>
-              <a href="#headphones">The Headphone Test</a>
-              <a href="#cutting">Cutting Losses – And Turning to AI</a>
-              <a href="#numbers">For stark comparisons, these are the numbers</a>
-              <a href="#appendixA">Appendix A</a>
-              <a href="#appendixB">Appendix B</a>
-              <a href="#appendixC">Appendix C</a>
-            </div>
-          </details>
           {/* ------------------------------- */}
           {/* BLOG CONTENT — TEXT UNCHANGED   */}
           {/* ------------------------------- */}
@@ -292,35 +275,57 @@ Are there caveats to those numbers? Without any doubt. If I had known, and stuck
 
 <p>In summary, from what I can tell, the A.I. / machine learning tool was used here in the same manner that it might be used to recognize a face in a photo, or trace the outline of a person in a picture; it just traced out the waveform pretty darn well and (if that's the case) then was able to apply the necessary loudness to it. That's in essence all it did that was more efficient than a person, and it just so happens that for this project nothing else was really needed.</p>
 
-          <h2 id="appendixA">Appendix A: an improved recording rig (no more cell phone)</h2>
+				<h2 id="appendixA">Appendix A: an improved recording rig (no more cell phone)</h2>
 
 <p>
-  Not that a high bar was necessarily set, now the recording rig is looking better. In sequence, it consists of,<br /><br />
-  (i) A vintage 6-string and 12-string guitar, and voice, into,<br />
-  (ii) Multiple Shure mics, into,<br />
-  (iii) A tube preamp, to boost loudness and attain some tube tone, into,<br />
-  (iv) An analog Tascam tape recorder, for some analog saturation, into,<br />
-  (v) a Behringer audio interface, as an analog to digital converter, into,<br />
-  (vi) Audacity (on the computer), to see the digital waveform, into,<br />
-  (vii) the same AI tool, essentially just as a loudness tool like before.
+Not that a high bar was necessarily set, now the recording rig is looking better. In sequence, it consists of,<br /><br />
+(i) A vintage 6-string and 12-string guitar, and voice, into,<br />
+(ii) Multiple Shure mics, into,<br />
+(iii) A tube preamp, to boost loudness and attain some tube tone, into,<br />
+(iv) An analog Tascam tape recorder, for some analog saturation, into,<br />
+(v) a Behringer audio interface, as an analog to digital converter, into,<br />
+(vi) Audacity (on the computer), to see the digital waveform, into,<br />
+(vii) the same AI tool, essentially just as a loudness tool like before.
 </p>
 
-          <h2 id="appendixB">Appendix B: the next project</h2>
+				<h2 id="appendixB">Appendix B: the next project</h2>
 
-          <p>
+				<p>
 
 For a second album, I'm planning to put together a handful of traditional spiritual tracks (using the setup described above), and this is one example demo below.
-          </p>
-    <AudioPlayer
-      src="https://bmvuqgfxczoytjwjpvcn.supabase.co/storage/v1/object/public/misc/2025.11.09_precious-lord_pannedLeftRight.mp3"
-      title="Take My Hand, Precious Lord"
-			subtitle="November 9th, 2025"
-    />
-          <h2 id="appendixC">Appendix C: about me,</h2>
+				</p>
+	<AudioPlayer
+		src="https://bmvuqgfxczoytjwjpvcn.supabase.co/storage/v1/object/public/misc/2025.11.09_precious-lord_pannedLeftRight.mp3"
+		title="Demo: Take My Hand, Precious Lord"
+		subtitle="November 9th, 2025"
+	/>
+				<h2 id="appendixB">Appendix C: In the meantime, this is how a phone plus a fly-by-night A.I. tool can sound</h2>
+<p>
+This album is <i>probably</i> the first traditional blues album, which has been recorded with a cell phone and an A.I. loudness booster, as parts of the toolchain. It was recorded during the timespan of September 8th, 2024 to June 13th, 2025, in Alberta, Canada. Maybe this can be the start of an "Alberta Blues" sound?
+</p>
+<div class="quoteSection">
 
-          <p>
-For music, on most platforms, I can be tracked down under the name of 'blah148'. As a separate project, for folk & blues technical studies, I post transcriptions on https://ploddings.com, which is a site that I have operated since 2018, containing transcriptions of artists such as Reverend Gary Davis, Etta Baker, John Fahey, Charley Patton, Andres Segovia, as well as others. Finally, on my Youtube channel, I have posted instructional videos on pre-war blues related styles since about 2011, and have posted performance streams since about 2024. For the confidence to begin singing, I am thankful to Jontavious Willis for the encouragement and motivation.
-          </p>
+  <blockquote class="artistQuote">
+    <p><i>“That was beautiful… the best version of St. Louis Blues I’ve ever heard. I was telling my friends about you.”</i></p>
+    <footer>— Jerron Paxton, August 2025 (Centrum Blues Festival)</footer>
+  </blockquote>
+
+  <blockquote class="artistQuote">
+    <p><i>“You can really play, man.”</i></p>
+    <footer>— Jontavious Willis, March 2020 (personal call)</footer>
+  </blockquote>
+
+  <blockquote class="artistQuote">
+    <p><i>“He’s got it right.”</i></p>
+    <footer>— Jimmy “Duck” Holmes, April 2016 (on a rendition of Skip James' "Devil Got My Woman")</footer>
+  </blockquote>
+
+</div>
+
+
+<Hypeddit />
+<Footer />
+
         </main>
       </div>
     </>

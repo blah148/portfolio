@@ -1,0 +1,202 @@
+/* ------------------------------
+   PAGE BACKGROUND
+------------------------------ */
+.page {
+  min-height: 100svh;
+  background: linear-gradient(160deg, #0b0f14 0%, #1b1f29 35%, #030303 100%);
+  color: #e8edf6;
+}
+
+/* ------------------------------
+   CONTAINER
+------------------------------ */
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 16px 14px 28px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* ------------------------------
+   HERO IMAGE (MOBILE DEFAULT)
+------------------------------ */
+.heroImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #0f141c;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+.heroPlaceholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #151c27, #0f141c);
+}
+
+/* ------------------------------
+   50/50 SPLIT LAYOUT
+------------------------------ */
+.splitRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.leftCol {
+  width: 100%;
+}
+
+.rightCol {
+  width: 100%;
+}
+
+/* Tablet & Desktop: enable 2-column layout */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px !important; /* Allow room for 50/50 */
+  }
+
+  .splitRow {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .leftCol,
+  .rightCol {
+    width: 50%;
+  }
+
+  .leftCol {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .rightCol {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .heroImage {
+    width: 90%;
+    max-width: 350px;
+    border-radius: 12px;
+  }
+}
+
+/* ------------------------------
+   PLATFORM TABLE
+------------------------------ */
+.platformSection {
+  margin-top: 10px;
+}
+
+.platformTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.platformRow {
+  border-bottom: 1px solid rgba(128, 152, 190, 0.18);
+}
+
+.logoCell,
+.actionCell {
+  padding: 12px 4px;
+  vertical-align: middle;
+}
+
+.logoCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoWrap {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #111823;
+  border: 1px solid rgba(128, 152, 190, 0.16);
+}
+
+.logoIcon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.4));
+}
+
+.platformLabel {
+  font-size: 1rem;
+}
+
+/* ------------------------------
+   PLAY BUTTONS
+------------------------------ */
+.playBtn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+.playBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Brand Button Styles */
+.btnYoutube {
+  background: linear-gradient(180deg, #ff3b3b, #c01111);
+}
+.btnSpotify {
+  background: linear-gradient(180deg, #1ed760, #149e44);
+}
+.btnApple {
+  background: linear-gradient(180deg, #2a2a2c, #141416);
+}
+
+/* Brand Icon Accent Colors */
+.youtube {
+  color: #ff4a4a;
+}
+.spotify {
+  color: #1ed760;
+}
+.apple {
+  color: #f5f5f7;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.footer {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px dashed rgba(128, 152, 190, 0.18);
+  text-align: center;
+}
+
+.footerLink {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+

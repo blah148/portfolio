@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { supabase } from '../../../lib/supabaseClient';
 import styles from '../../../styles/LandingPage.module.css';
 import GTM from '../../../components/GTM';
+import Hypeddit from '../../../components/Hypeddit.js';
 import { FaSpotify, FaApple, FaYoutube, FaBandcamp } from 'react-icons/fa';
 
 export default function LandingPage({ lp }) {

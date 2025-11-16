@@ -324,19 +324,19 @@ export default function Page() {
 	<p>
 	This album is <i>probably</i> the first traditional blues album, which has been recorded with a cell phone and an A.I. loudness booster, as parts of the toolchain. It was recorded during the timespan of September 8th, 2024 to June 13th, 2025, in Alberta, Canada.
 	</p>
-	<div class="quoteSection">
+	<div className="quoteSection">
 
-		<blockquote class="artistQuote">
+		<blockquote className="artistQuote">
 			<p><i>“That was beautiful… the best version of St. Louis Blues I’ve ever heard. I was telling my friends about you.”</i></p>
 			<footer>— Jerron Paxton, August 2025 (Centrum Blues Festival)</footer>
 		</blockquote>
 
-		<blockquote class="artistQuote">
+		<blockquote className="artistQuote">
 			<p><i>“You can really play, man.”</i></p>
 			<footer>— Jontavious Willis, March 2020 (personal call)</footer>
 		</blockquote>
 
-		<blockquote class="artistQuote">
+		<blockquote className="artistQuote">
 			<p><i>“He’s got it right.”</i></p>
 			<footer>— Jimmy “Duck” Holmes, April 2016 (on a rendition of Skip James' "Devil Got My Woman")</footer>
 		</blockquote>

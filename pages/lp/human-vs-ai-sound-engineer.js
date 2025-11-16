@@ -37,7 +37,7 @@ export default function Page() {
 	{/* MOBILE HERO IMAGE (shows only under 768px) */}
 	<div className="hero-mobile">
 		<Image
-			src="https://blah148.s3.us-east-005.backblazeb2.com/photos/IMG_5387.jpeg"
+			src="https://f005.backblazeb2.com/file/blah148/photos/IMG_5387.jpeg"
 			alt="Hero"
 			width={1520}
 			height={855}
@@ -49,7 +49,7 @@ export default function Page() {
 	{/* DESKTOP HERO IMAGE (shows only at 768px and above) */}
 	<div className="hero-desktop">
 		<Image
-			src="https://blah148.s3.us-east-005.backblazeb2.com/photos/IMG_5387.jpeg"
+			src="https://f005.backblazeb2.com/file/blah148/photos/IMG_5387.jpeg"
 			alt="Hero"
 			width={1520}
 			height={855}

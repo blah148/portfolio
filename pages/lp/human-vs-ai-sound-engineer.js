@@ -347,7 +347,7 @@ export default function Page() {
 	<Hypeddit />
 	<br/>
 <p className="mobile-left-desktop-center">
-  Maybe this can be the start of the "Alberta Blues"?
+  Maybe this can be the start of the "Alberta Blues"? Bleep bloop.
 </p>
 
 

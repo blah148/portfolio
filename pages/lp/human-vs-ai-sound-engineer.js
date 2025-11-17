@@ -38,7 +38,7 @@ export default function Page() {
 	<div className="hero-mobile">
 		<Image
 			src="https://f005.backblazeb2.com/file/blah148/photos/top_image(2).jpeg"
-			alt="Hero"
+			alt="top image"
 			width={1520}
 			height={855}
 			quality={75}
@@ -50,7 +50,7 @@ export default function Page() {
 	<div className="hero-desktop">
 		<Image
 			src="https://f005.backblazeb2.com/file/blah148/photos/top_image(2).jpeg"
-			alt="Hero"
+			alt="top image"
 			width={1520}
 			height={855}
 			quality={75}

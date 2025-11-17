@@ -141,7 +141,6 @@
 
 .logoCell,
 .actionCell {
-  padding: 12px 12px;
   vertical-align: middle;
 }
 
@@ -266,5 +265,20 @@
 .clickableRow:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
+}
+.fullRowLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 24px 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickableRow:hover .fullRowLink {
+  opacity: 0.85;
+  cursor: pointer;
 }
 

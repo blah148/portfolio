@@ -7,14 +7,14 @@ import { FaSpotify, FaApple, FaYoutube } from "react-icons/fa";
 /* ------------------------------
    HARD-CODED PLATFORM LINKS
 ------------------------------ */
-const YOUTUBE_LINK =
-  "https://www.youtube.com/playlist?list=PL-JSdGJVjJUg_Lof9qHJq86yZrXFWyrFm";
-
 const SPOTIFY_LINK =
   "https://open.spotify.com/album/7d8NpGwxV9OS0evVmLU2VE";
 
 const APPLE_LINK =
   "https://music.apple.com/us/album/the-bell-it-shines-like-gold/1848658554";
+
+const YOUTUBE_LINK =
+  "https://www.youtube.com/playlist?list=PL-JSdGJVjJUg_Lof9qHJq86yZrXFWyrFm";
 
 /* Displayed info */
 const HERO_IMAGE =
@@ -74,16 +74,30 @@ export default function Hypeddit() {
                     <tr
                       key={key}
                       className={`${styles.platformRow} ${styles.clickableRow}`}
-                      onClick={() => window.open(href, "_blank")}
                     >
                       <td className={styles.logoCell}>
-                        <span
-                          className={`${styles.logoWrap} ${iconClass}`}
-                          aria-hidden="true"
+
+                        {/* Fully GTM-safe clickable link */}
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`gtm-${key} ${styles.fullRowLink}`}
                         >
-                          <Icon className={styles.logoIcon} />
-                        </span>
-                        <span className={styles.platformLabel}>{label}</span>
+
+                          <span
+                            className={`gtm-${key} ${styles.logoWrap} ${iconClass}`}
+                            aria-hidden="true"
+                          >
+                            <Icon className={`gtm-${key} ${styles.logoIcon}`} />
+                          </span>
+
+                          <span className={`gtm-${key} ${styles.platformLabel}`}>
+                            {label}
+                          </span>
+
+                        </a>
+
                       </td>
                     </tr>
                   ))}

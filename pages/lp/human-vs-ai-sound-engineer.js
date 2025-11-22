@@ -13,14 +13,14 @@ import "../../styles/blog.css";
 export const metadata = {
   title: "Human vs AI Sound Engineer",
   description:
-    "Musician compares $5,358.30 human vs. $200 A.I. mix - the results are surprising.",
+    "Comparing $5,358.30 human vs. $200 A.I. mix - the results are surprising.",
 };
 
 export default function Page() {
 		return (
 			<>
 	<SEO
-		title="Human vs AI Sound Engineer - These Are The Results"
+		title="$5,358 Human vs $200 AI Sound Engineer - These Are The Results"
 		description="Comparing a $5,358 human-made mix vs. an $200 A.I.-made mix - listen to the difference."
 		image="https://f005.backblazeb2.com/file/blah148/albums/the-bell-it-shines-like-gold_pt-1.jpg"
 		slug="/lp/mix-comparison"

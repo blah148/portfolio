@@ -4,39 +4,24 @@ import Link from 'next/link';
 import styles from './header.module.css'; 
 import Menu from './Menu.js';
 import LeftChevron from './LeftChevron';
+import ArtistStreamingLinks from './ArtistStreamingLinks'; // ✅ new import
 
 export default function Header({ logoTitle = "Park, Mitch", page_level = null }) {
   return (
     <header className={styles.header}>
-      {/* If page_level is 2, show the LeftChevron */}
+      {/* Left-chevron navigation */}
       {page_level === 2 && <LeftChevron />}
 
-      {/* Logo Section with title prop */}
+      {/* Logo / Title */}
       <h1 className={styles.logo} title={logoTitle}>
         {logoTitle}
       </h1>
 
+      {/* Menu stays in middle */}
       <Menu />
 
-      {/* Social Links placeholder
-      <div className={styles.socialLinks}>
-        {socialLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.destination_url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={link.icon_link}
-              alt={link.icon_alt_text}
-              width={24}
-              height={24}
-            />
-          </a>
-        ))}
-      </div>
-      */}
+      {/* ✅ Streaming links now appear at the right */}
+      <ArtistStreamingLinks />
     </header>
   );
 }

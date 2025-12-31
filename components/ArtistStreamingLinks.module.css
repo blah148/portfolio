@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.link {
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+	padding: 10px;
+}
+
+.link:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 🎵 Brand Colors */
+.spotify {
+  color: #1db954; /* Spotify Green */
+}
+
+.apple {
+  color: #000000; /* Apple Music black */
+}
+
+.youtube {
+  color: #ff0000; /* YouTube Red */
+}
+
+.bandcamp {
+  color: #629aa9; /* Bandcamp Blue-Green */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    margin-right: 42px;
+  }
+}

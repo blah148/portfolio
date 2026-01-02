@@ -4,23 +4,15 @@ import { supabase } from '../../../lib/supabaseClient';
 import styles from '../../../styles/LandingPage.module.css';
 import GTM from '../../../components/GTM';
 import Hypeddit from '../../../components/Hypeddit.js';
-import { FaSpotify, FaApple, FaYoutube, FaBandcamp } from 'react-icons/fa';
+import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa';
 
 export default function LandingPage({ lp }) {
   const title = lp.seo_title || lp.page_title || 'Landing';
   const desc = lp.seo_description || '';
   const canonical = lp.slug ? `/lp/${lp.slug}` : `/lp/${lp.id}`;
 
-  // Build platform rows (YouTube first, then others)
+  // Build platform rows (Spotify → Apple Music → YouTube)
   const rows = [
-    lp.youtube_url && {
-      key: 'youtube',
-      label: 'YouTube',
-      href: lp.youtube_url,
-      Icon: FaYoutube,
-      btnClass: styles.btnYoutube,
-      iconClass: styles.youtube,
-    },
     lp.spotify_url && {
       key: 'spotify',
       label: 'Spotify',
@@ -37,13 +29,13 @@ export default function LandingPage({ lp }) {
       btnClass: styles.btnApple,
       iconClass: styles.apple,
     },
-    lp.bandcamp_url && {
-      key: 'bandcamp',
-      label: 'Bandcamp',
-      href: lp.bandcamp_url,
-      Icon: FaBandcamp,
-      btnClass: styles.btnBandcamp,
-      iconClass: styles.bandcamp,
+    lp.youtube_url && {
+      key: 'youtube',
+      label: 'YouTube',
+      href: lp.youtube_url,
+      Icon: FaYoutube,
+      btnClass: styles.btnYoutube,
+      iconClass: styles.youtube,
     },
   ].filter(Boolean);
 
@@ -82,58 +74,72 @@ export default function LandingPage({ lp }) {
 
           {/* Title / Artist (centered, vertical) */}
           <section className={styles.metaBlock}>
-            <h1 className={styles.songTitle}>{lp.song_title || lp.page_title || 'Untitled'}</h1>
-<section className={styles.artistRow}>
-  <div className={styles.artistImageWrapper}>
-    <img
-      src="https://f005.backblazeb2.com/file/blah148/profile-images/profile-image_blah148_200x200.jpeg"
-      alt="blah148 artist image"
-      className={styles.artistImage}
-      width={50}
-      height={50}
-    />
-  </div>
-  <div className={styles.artistTextWrapper}>
-    <div className={styles.artistName}>blah148</div>
-  </div>
-</section>
+            <h1 className={styles.songTitle}>
+              {lp.song_title || lp.page_title || 'Untitled'}
+            </h1>
 
+            <section className={styles.artistRow}>
+              <div className={styles.artistImageWrapper}>
+                <img
+                  src="https://f005.backblazeb2.com/file/blah148/profile-images/profile-image_blah148_200x200.jpeg"
+                  alt="blah148 artist image"
+                  className={styles.artistImage}
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div className={styles.artistTextWrapper}>
+                <div className={styles.artistName}>blah148</div>
+              </div>
+            </section>
           </section>
 
-          {/* Platform “table”: logo in col 1, Play button in col 2 */}
+          {/* Platform table */}
           {rows.length > 0 && (
-            <section className={styles.platformSection} aria-label="Streaming platforms">
+            <section
+              className={styles.platformSection}
+              aria-label="Streaming platforms"
+            >
               <table className={styles.platformTable}>
                 <tbody>
-                  {rows.map(({ key, label, href, Icon, btnClass, iconClass }) => (
-                    <tr key={key} className={styles.platformRow}>
-                      <td className={styles.logoCell}>
-                        <span className={`${styles.logoWrap} ${iconClass}`} aria-hidden="true">
-                          <Icon className={styles.logoIcon} />
-                        </span>
-                        <span className={styles.platformLabel}>{label}</span>
-                      </td>
-                      <td className={styles.actionCell}>
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`${styles.playBtn} ${btnClass}`}
-                          aria-label={`Play on ${label}`}
-                        >
-                          Play
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
+                  {rows.map(
+                    ({ key, label, href, Icon, btnClass, iconClass }) => (
+                      <tr key={key} className={styles.platformRow}>
+                        <td className={styles.logoCell}>
+                          <span
+                            className={`${styles.logoWrap} ${iconClass}`}
+                            aria-hidden="true"
+                          >
+                            <Icon className={styles.logoIcon} />
+                          </span>
+                          <span className={styles.platformLabel}>
+                            {label}
+                          </span>
+                        </td>
+                        <td className={styles.actionCell}>
+                          <a
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${styles.playBtn} ${btnClass}`}
+                            aria-label={`Play on ${label}`}
+                          >
+                            Play
+                          </a>
+                        </td>
+                      </tr>
+                    )
+                  )}
                 </tbody>
               </table>
             </section>
           )}
 
-          {/* Footer with Privacy Policy */}
+          {/* Footer */}
           <footer className={styles.footer}>
-            <a href="/privacy-policy" className={styles.footerLink}>Privacy Policy</a>
+            <a href="/privacy-policy" className={styles.footerLink}>
+              Privacy Policy
+            </a>
           </footer>
         </div>
       </main>
@@ -141,7 +147,7 @@ export default function LandingPage({ lp }) {
   );
 }
 
-/* --- getServerSideProps at the bottom --- */
+/* --- getServerSideProps --- */
 export async function getServerSideProps({ params }) {
   const { id } = params;
   const isNumericId = /^\d+$/.test(id);
@@ -162,14 +168,15 @@ export async function getServerSideProps({ params }) {
       spotify_url,
       apple_music_url,
       youtube_url,
-      bandcamp_url,
       hero_image,
       song_title,
       is_active,
       created_at
     `);
 
-  query = isNumericId ? query.eq('id', Number(id)) : query.eq('slug', id);
+  query = isNumericId
+    ? query.eq('id', Number(id))
+    : query.eq('slug', id);
 
   const { data, error } = await query.maybeSingle();
 
@@ -177,6 +184,7 @@ export async function getServerSideProps({ params }) {
     console.error('LP fetch error:', error);
     return { notFound: true };
   }
+
   if (!data || data.is_active === false) {
     return { notFound: true };
   }

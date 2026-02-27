@@ -4,7 +4,7 @@ import { supabase } from '../../lib/supabaseClient';
 import styles from '../../styles/Photos.module.css';
 
 export const metadata = {
-  title: 'blah148 - Gallery',
+  title: 'blahnok - Gallery',
   description:
     'Photos of Mitch Park (Blah148) from Alberta, Canada, primarily taken in the town of St. Paul, along Therenien Lake with a sunburst Gibson LG-1 guitar.',
 };

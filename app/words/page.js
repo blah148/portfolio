@@ -2,7 +2,7 @@
 import styles from '../../styles/Bio.module.css';
 
 export const metadata = {
-  title: 'blah148 - Words',
+  title: 'blahnok - Words',
   description: 'A summary of upbringing as well as music listened-to',
 };
 

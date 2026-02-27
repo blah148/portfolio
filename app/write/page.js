@@ -1,102 +1,42 @@
-'use client';
+// app/write/page.js
+import styles from '../../styles/Bio.module.css';
 
-import { useState } from 'react';
-import styles from '../../styles/ContactForm.module.css';
+export const metadata = {
+  title: 'blahnok - Write',
+  description: 'Contact information for Ploddings correspondence',
+};
 
-export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    fname: '',
-    email: '',
-    message: '',
-  });
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { fname, email, message } = formData;
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!email || !message) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-
-    setIsLoading(true);
-
-    try {
-      const response = await fetch('/api/sendContactForm', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setFormData({ fname: '', email: '', message: '' });
-        alert('Form submitted successfully!');
-      } else {
-        const error = await response.json();
-        alert(`Error: ${error.message}`);
-      }
-    } catch (error) {
-      console.error('Submission error:', error);
-      alert('An error occurred while submitting the form.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+export default function WritePage() {
   return (
-    <div className={styles['contact-form']}>
-      {isLoading && <p>Submitting…</p>}
-      <div className={styles.formBox}>
-        <p>An online contact form to send messages,</p>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="fname" className={styles.labelTag}>
-            Name <span className={styles.required}>*</span> :
-          </label>
-          <input
-            className={styles.formRow}
-            type="text"
-            id="fname"
-            name="fname"
-            value={fname}
-            onChange={handleChange}
-          />
+    <div className={styles['bio-content']}>
+      <h2>Write</h2>
 
-          <label htmlFor="email" className={styles.labelTag}>
-            Email <span className={styles.required}>*</span> :
-          </label>
-          <input
-            className={styles.formRow}
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            required
-            onChange={handleChange}
-          />
+      <p>
+        To write (and send) a message, the following email address can be used:
+      </p>
 
-          <label htmlFor="message" className={styles.labelTag}>
-            Message <span className={styles.required}>*</span> :
-          </label>
-          <textarea
-            className={`${styles.formRow} ${styles.messageBox}`}
-            id="message"
-            name="message"
-            required
-            value={message}
-            onChange={handleChange}
-          ></textarea>
+      <p>
+        <span id="contact-email">
+          info [at] ploddings [dot] com
+        </span>
+      </p>
 
-          <button className={styles.formButton} type="submit" disabled={isLoading}>
-            {isLoading ? 'Sending…' : 'Send Message'}
-          </button>
-        </form>
-      </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              var user = "info";
+              var domain = "ploddings";
+              var tld = "com";
+              var email = user + "@" + domain + "." + tld;
+              var container = document.getElementById("contact-email");
+              if (container) {
+                container.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+              }
+            })();
+          `,
+        }}
+      />
     </div>
   );
 }
-

@@ -16,27 +16,12 @@ export default function WritePage() {
       </p>
 
       <p>
-        <span id="contact-email">
-          info [at] ploddings [dot] com
-        </span>
+        <em>
+          <span id="contact-email">
+            info [at] ploddings [dot] com
+          </span>
+        </em>
       </p>
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              var user = "info";
-              var domain = "ploddings";
-              var tld = "com";
-              var email = user + "@" + domain + "." + tld;
-              var container = document.getElementById("contact-email");
-              if (container) {
-                container.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
-              }
-            })();
-          `,
-        }}
-      />
     </div>
   );
 }

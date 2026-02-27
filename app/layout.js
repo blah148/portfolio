@@ -5,9 +5,9 @@ import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 
 export const metadata = {
-  title: 'blah148 - Home',
+  title: 'blahnok - Home',
   description:
-    'Website attempting to summarize musical projects of blah148, touching also on commentary.',
+    'Website attempting to summarize musical projects of blahnok (blah148), touching also on commentary.',
   icons: { icon: '/favicon.png' },
 };
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <div className="mainBody">
           <Sidebar />
           <div className="otherBody">
-            <Header logoTitle="blah148" />
+            <Header logoTitle="blahnok" />
             {children}
             <Footer />
           </div>

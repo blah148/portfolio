@@ -24,6 +24,29 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "blah148.com",
+          },
+        ],
+        destination: "https://blahnok.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.blah148.com",
+          },
+        ],
+        destination: "https://blahnok.com/:path*",
+        permanent: true,
+      },
+	    
+      {
         source: "/bio",
         destination: "/words",
         permanent: true,
@@ -36,4 +59,7 @@ module.exports = {
     ];
   },
 };
+
+
+
 
